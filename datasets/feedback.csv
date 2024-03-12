@@ -1,0 +1,351 @@
+Transaction ID,Customer ID,Rating,Comments
+1,3,4,"The product was excellent, but delivery was a bit late."
+2,1,2,Product quality was not up to the mark. Disappointed.
+3,5,5,Great experience! Very satisfied with the purchase.
+4,2,3,Average product. Expected better quality for the price.
+5,4,1,Terrible experience. Product arrived damaged.
+6,3,4,The customer service was helpful in resolving my issue.
+7,1,5,Highly recommend this product. Very happy with it!
+8,5,3,"Satisfied with the purchase, but shipping took longer than expected."
+9,2,4,Product was as described. No complaints.
+10,4,2,Not happy with the product. Will not buy again.
+11,3,5,Excellent product quality. Delivered on time.
+12,1,3,Product was okay. Nothing extraordinary.
+13,5,4,Happy with the purchase. Would buy again.
+14,2,2,Product did not meet my expectations.
+15,4,5,Absolutely love the product! Great value for money.
+16,3,1,Worst purchase ever. Product broke within a week.
+17,1,4,Good product quality. No issues with delivery.
+18,5,3,"Product was fine, but packaging could have been better."
+19,2,5,Very satisfied with the purchase. Will recommend to others.
+20,4,2,Disappointed with the product. Did not match the description.
+21,3,4,Impressed with the customer service. They were very responsive.
+22,1,5,Exactly what I was looking for. Happy with my purchase.
+23,5,3,"Product was good, but took longer to arrive than expected."
+24,2,4,Satisfied with the product. No complaints.
+25,4,2,Not happy with the quality. Expected better.
+26,3,5,Excellent customer service. They resolved my issue promptly.
+27,1,3,Average product quality. Expected more for the price.
+28,5,4,Overall satisfied with the purchase experience.
+29,2,2,Product did not meet my expectations. Disappointed.
+30,4,5,Great product! Exactly as described.
+31,3,1,Product was defective. Had to return it for a refund.
+32,1,4,Happy with the purchase. No issues encountered.
+33,5,3,Product was satisfactory. Nothing exceptional.
+34,2,5,Very happy with the product. Exceeded my expectations.
+35,4,2,Not satisfied with the purchase. Product was damaged.
+36,3,4,Great product quality. Would buy again.
+37,1,5,Extremely satisfied with the purchase. Highly recommend.
+38,5,3,Decent product. Could be better for the price.
+39,2,4,Product was as described. No complaints.
+40,4,2,Product did not meet my expectations.
+41,3,5,Very impressed with the product quality. Highly recommend.
+42,1,3,Average product. Nothing special.
+43,5,4,Satisfied with the purchase. Would buy again.
+44,2,2,Disappointed with the product quality.
+45,4,5,Excellent product! Very happy with the purchase.
+46,3,1,Terrible experience. Product never arrived.
+47,1,4,Good product quality. Delivery was on time.
+48,5,3,"Product was fine, but customer service could be improved."
+49,2,5,Extremely satisfied with the product. Exactly what I needed.
+50,4,2,Not happy with the product. Quality was poor.
+51,101,4,Good service
+52,102,2,Slow response
+53,103,5,Excellent support
+54,104,3,Fair experience
+55,105,4,Quick resolution
+56,106,5,Very helpful
+57,107,3,Needs improvement
+58,108,5,Great assistance
+59,109,2,Unsatisfactory
+60,110,4,Responsive team
+61,111,3,Average service
+62,112,1,Poor response time
+63,113,5,Exceptional service
+64,114,4,Effective communication
+65,115,2,Unsatisfactory resolution
+66,116,5,Highly recommended
+67,117,4,Friendly support
+68,118,3,Satisfactory experience
+69,119,1,Disappointing service
+70,120,5,Very satisfied
+71,121,3,Mediocre assistance
+72,122,2,Inadequate resolution
+73,123,5,Outstanding support
+74,124,4,Resolved my issue
+75,125,5,Excellent service
+76,126,2,Slow support
+77,127,4,Good resolution
+78,128,3,Needs improvement
+79,129,5,Quick response
+80,130,4,Helpful staff
+81,131,4,Good service
+82,132,2,Slow response
+83,133,5,Excellent support
+84,134,3,Fair experience
+85,135,4,Quick resolution
+86,136,5,Very helpful
+87,137,3,Needs improvement
+88,138,5,Great assistance
+89,139,2,Unsatisfactory
+90,140,4,Responsive team
+91,141,3,Average service
+92,142,1,Poor response time
+93,143,5,Exceptional service
+94,144,4,Effective communication
+95,145,2,Unsatisfactory resolution
+96,146,5,Highly recommended
+97,147,4,Friendly support
+98,148,3,Satisfactory experience
+99,149,1,Disappointing service
+100,150,5,Very satisfied
+101,151,3,Mediocre assistance
+102,152,2,Inadequate resolution
+103,153,5,Outstanding support
+104,154,4,Resolved my issue
+105,155,5,Excellent service
+106,156,2,Slow support
+107,157,4,Good resolution
+108,158,3,Needs improvement
+109,159,5,Quick response
+110,160,4,Helpful staff
+111,161,4,Good service
+112,162,2,Slow response
+113,163,5,Excellent support
+114,164,3,Fair experience
+115,165,4,Quick resolution
+116,166,5,Very helpful
+117,167,3,Needs improvement
+118,168,5,Great assistance
+119,169,2,Unsatisfactory
+120,170,4,Responsive team
+121,171,3,Average service
+122,172,1,Poor response time
+123,173,5,Exceptional service
+124,174,4,Effective communication
+125,175,2,Unsatisfactory resolution
+126,176,5,Highly recommended
+127,177,4,Friendly support
+128,178,3,Satisfactory experience
+129,179,1,Disappointing service
+130,180,5,Very satisfied
+131,181,3,Mediocre assistance
+132,182,2,Inadequate resolution
+133,183,5,Outstanding support
+134,184,4,Resolved my issue
+135,185,5,Excellent service
+136,186,2,Slow support
+137,187,4,Good resolution
+138,188,3,Needs improvement
+139,189,5,Quick response
+140,190,4,Helpful staff
+141,191,4,Good service
+142,192,2,Slow response
+143,193,5,Excellent support
+144,194,3,Fair experience
+145,195,4,Quick resolution
+146,196,5,Very helpful
+147,197,3,Needs improvement
+148,198,5,Great assistance
+149,199,2,Unsatisfactory
+150,200,4,Responsive team
+151,201,3,Average service
+152,202,1,Poor response time
+153,203,5,Exceptional service
+154,204,4,Effective communication
+155,205,2,Unsatisfactory resolution
+156,206,5,Highly recommended
+157,207,4,Friendly support
+158,208,3,Satisfactory experience
+159,209,1,Disappointing service
+160,210,5,Very satisfied
+161,211,3,Mediocre assistance
+162,212,2,Inadequate resolution
+163,213,5,Outstanding support
+164,214,4,Resolved my issue
+165,215,5,Excellent service
+166,216,2,Slow support
+167,217,4,Good resolution
+168,218,3,Needs improvement
+169,219,5,Quick response
+170,220,4,Helpful staff
+171,221,4,Good service
+172,222,2,Slow response
+173,223,5,Excellent support
+174,224,3,Fair experience
+175,225,4,Quick resolution
+176,226,5,Very helpful
+177,227,3,Needs improvement
+178,228,5,Great assistance
+179,229,2,Unsatisfactory
+180,230,4,Responsive team
+181,231,3,Average service
+182,232,1,Poor response time
+183,233,5,Exceptional service
+184,234,4,Effective communication
+185,235,2,Unsatisfactory resolution
+186,236,5,Highly recommended
+187,237,4,Friendly support
+188,238,3,Satisfactory experience
+189,239,1,Disappointing service
+190,240,5,Very satisfied
+191,241,3,Mediocre assistance
+192,242,2,Inadequate resolution
+193,243,5,Outstanding support
+194,244,4,Resolved my issue
+195,245,5,Excellent service
+196,246,2,Slow support
+197,247,4,Good resolution
+198,248,3,Needs improvement
+199,249,5,Quick response
+200,250,4,Helpful staff
+201,251,4,Good service
+202,252,2,Slow response
+203,253,5,Excellent support
+204,254,3,Fair experience
+205,255,4,Quick resolution
+206,256,5,Very helpful
+207,257,3,Needs improvement
+208,258,5,Great assistance
+209,259,2,Unsatisfactory
+210,260,4,Responsive team
+211,261,3,Average service
+212,262,1,Poor response time
+213,263,5,Exceptional service
+214,264,4,Effective communication
+215,265,2,Unsatisfactory resolution
+216,266,5,Highly recommended
+217,267,4,Friendly support
+218,268,3,Satisfactory experience
+219,269,1,Disappointing service
+220,270,5,Very satisfied
+221,271,3,Mediocre assistance
+222,272,2,Inadequate resolution
+223,273,5,Outstanding support
+224,274,4,Resolved my issue
+225,275,5,Excellent service
+226,276,2,Slow support
+227,277,4,Good resolution
+228,278,3,Needs improvement
+229,279,5,Quick response
+230,280,4,Helpful staff
+231,251,4,Good service
+232,252,2,Slow response
+233,253,5,Excellent support
+234,254,3,Fair experience
+235,255,4,Quick resolution
+236,256,5,Very helpful
+237,257,3,Needs improvement
+238,258,5,Great assistance
+239,259,2,Unsatisfactory
+240,260,4,Responsive team
+241,261,3,Average service
+242,262,1,Poor response time
+243,263,5,Exceptional service
+244,264,4,Effective communication
+245,265,2,Unsatisfactory resolution
+246,266,5,Highly recommended
+247,267,4,Friendly support
+248,268,3,Satisfactory experience
+249,269,1,Disappointing service
+250,270,5,Very satisfied
+251,271,3,Mediocre assistance
+252,272,2,Inadequate resolution
+253,273,5,Outstanding support
+254,274,4,Resolved my issue
+255,275,5,Excellent service
+256,276,2,Slow support
+257,277,4,Good resolution
+258,278,3,Needs improvement
+259,279,5,Quick response
+260,280,4,Helpful staff
+261,221,4,Good service
+262,122,2,Slow response
+263,223,5,Excellent support
+264,224,3,Fair experience
+265,125,4,Quick resolution
+266,126,5,Very helpful
+267,127,3,Needs improvement
+268,128,5,Great assistance
+269,129,2,Unsatisfactory
+270,230,4,Responsive team
+271,131,3,Average service
+272,232,1,Poor response time
+273,133,5,Exceptional service
+274,234,4,Effective communication
+275,135,2,Unsatisfactory resolution
+276,236,5,Highly recommended
+277,137,4,Friendly support
+278,238,3,Satisfactory experience
+279,139,1,Disappointing service
+280,240,5,Very satisfied
+281,141,3,Mediocre assistance
+282,242,2,Inadequate resolution
+283,143,5,Outstanding support
+284,244,4,Resolved my issue
+285,145,5,Excellent service
+286,246,2,Slow support
+287,147,4,Good resolution
+288,248,3,Needs improvement
+289,149,5,Quick response
+290,250,4,Helpful staff
+291,139,4,Good service
+292,140,2,Slow response
+293,141,5,Excellent support
+294,142,3,Fair experience
+295,143,4,Quick resolution
+296,144,5,Very helpful
+297,145,3,Needs improvement
+298,146,5,Great assistance
+299,147,2,Unsatisfactory
+300,148,4,Responsive team
+301,149,3,Average service
+302,150,1,Poor response time
+303,151,5,Exceptional service
+304,152,4,Effective communication
+305,153,2,Unsatisfactory resolution
+306,154,5,Highly recommended
+307,155,4,Friendly support
+308,156,3,Satisfactory experience
+309,157,1,Disappointing service
+310,158,5,Very satisfied
+311,159,3,Mediocre assistance
+312,160,2,Inadequate resolution
+313,161,5,Outstanding support
+314,162,4,Resolved my issue
+315,163,5,Excellent service
+316,164,2,Slow support
+317,165,4,Good resolution
+318,166,3,Needs improvement
+319,167,5,Quick response
+320,168,4,Helpful staff
+321,169,4,Good service
+322,170,2,Slow response
+323,171,5,Excellent support
+324,172,3,Fair experience
+325,173,4,Quick resolution
+326,174,5,Very helpful
+327,175,3,Needs improvement
+328,176,5,Great assistance
+329,177,2,Unsatisfactory
+330,178,4,Responsive team
+331,179,3,Average service
+332,180,1,Poor response time
+333,181,5,Exceptional service
+334,182,4,Effective communication
+335,183,2,Unsatisfactory resolution
+336,184,5,Highly recommended
+337,185,4,Friendly support
+338,186,3,Satisfactory experience
+339,187,1,Disappointing service
+340,188,5,Very satisfied
+341,189,3,Mediocre assistance
+342,190,2,Inadequate resolution
+343,191,5,Outstanding support
+344,192,4,Resolved my issue
+345,193,5,Excellent service
+346,194,2,Slow support
+347,195,4,Good resolution
+348,196,3,Needs improvement
+349,197,5,Quick response
+350,198,4,Helpful staff

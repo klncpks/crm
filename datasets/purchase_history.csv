@@ -1,0 +1,351 @@
+Transaction ID,Customer ID,Date of Purchase,Product ID,Quantity Purchased,Region,Branch,Payment Mode,Total amount
+1,284,23-02-2024,138,3,Warangal,Hanamkonda,PayPal,59.97
+2,132,15-02-2024,112,2,Vikarabad,Kodangal,Credit Card,79.98
+3,145,17-02-2024,120,4,Karimnagar,Kondagattu,Cash,1599.96
+4,293,19-02-2024,115,1,Vikarabad,Kodangal,PayPal,499.99
+5,186,24-02-2024,108,5,Warangal,Hanamkonda,PayPal,649.95
+6,71,25-02-2024,116,2,Medchal,Hyderabad,Credit Card,299.98
+7,124,26-02-2024,119,3,Vikarabad,Kodangal,PayPal,899.97
+8,115,27-02-2024,126,4,Medchal,Hyderabad,Credit Card,279.96
+9,253,29-02-2024,146,3,Karimnagar,Kondagattu,Cash,74.97
+10,267,01-03-2024,142,5,Warangal,Hanamkonda,Cash,149.95
+11,65,02-03-2024,119,4,Karimnagar,Kondagattu,PayPal,1199.96
+12,128,04-03-2024,102,1,Vikarabad,Kodangal,Credit Card,699.99
+13,92,06-03-2024,142,2,Warangal,Hanamkonda,Cash,59.98
+14,56,07-03-2024,129,3,Medchal,Hyderabad,PayPal,149.97
+15,166,08-03-2024,144,2,Vikarabad,Kodangal,Credit Card,19.98
+16,136,09-03-2024,106,1,Warangal,Hanamkonda,Cash,79.99
+17,262,12-03-2024,113,5,Vikarabad,Kodangal,PayPal,499.95
+18,294,13-03-2024,125,2,Karimnagar,Kondagattu,Cash,59.98
+19,190,14-03-2024,109,4,Warangal,Hanamkonda,PayPal,199.96
+20,266,15-03-2024,132,1,Medchal,Hyderabad,Cash,99.99
+21,300,16-03-2024,140,2,Vikarabad,Kodangal,Credit Card,29.98
+22,79,18-03-2024,109,3,Medchal,Hyderabad,PayPal,149.97
+23,111,19-03-2024,106,4,Warangal,Hanamkonda,Credit Card,319.96
+24,260,21-03-2024,111,5,Karimnagar,Kondagattu,Cash,749.95
+25,183,22-03-2024,128,2,Vikarabad,Kodangal,PayPal,119.98
+26,277,23-03-2024,121,1,Warangal,Hanamkonda,Cash,19.99
+27,249,25-03-2024,105,3,Karimnagar,Kondagattu,Credit Card,599.97
+28,250,27-03-2024,106,4,Medchal,Hyderabad,PayPal,319.96
+29,36,28-03-2024,131,1,Vikarabad,Kodangal,Credit Card,29.99
+30,246,29-03-2024,115,2,Warangal,Hanamkonda,Cash,999.98
+31,68,30-03-2024,146,3,Medchal,Hyderabad,PayPal,74.97
+32,147,31-03-2024,129,5,Karimnagar,Kondagattu,Cash,249.95
+33,40,01-04-2024,115,2,Vikarabad,Kodangal,PayPal,999.98
+34,43,02-04-2024,147,1,Warangal,Hanamkonda,Cash,19.99
+35,202,03-04-2024,105,4,Medchal,Hyderabad,Credit Card,799.96
+36,40,04-04-2024,144,3,Vikarabad,Kodangal,PayPal,29.97
+37,40,05-04-2024,142,2,Warangal,Hanamkonda,Credit Card,59.98
+38,117,06-04-2024,121,1,Karimnagar,Kondagattu,Cash,19.99
+39,290,07-04-2024,116,3,Vikarabad,Kodangal,PayPal,449.97
+40,157,08-04-2024,125,5,Warangal,Hanamkonda,Cash,149.95
+41,22,10-04-2024,133,2,Karimnagar,Kondagattu,PayPal,159.98
+42,118,11-04-2024,101,1,Medchal,Hyderabad,Credit Card,899.99
+43,188,12-04-2024,107,4,Vikarabad,Kodangal,Cash,119.96
+44,173,13-04-2024,111,2,Warangal,Hanamkonda,PayPal,299.98
+45,142,14-04-2024,105,3,Karimnagar,Kondagattu,Credit Card,599.97
+46,19,15-04-2024,117,5,Medchal,Hyderabad,PayPal,1499.95
+47,193,16-04-2024,123,2,Vikarabad,Kodangal,Cash,159.98
+48,92,17-04-2024,127,1,Warangal,Hanamkonda,PayPal,39.99
+49,239,18-04-2024,120,4,Karimnagar,Kondagattu,Cash,1599.96
+50,200,20-04-2024,145,3,Medchal,Hyderabad,Credit Card,149.97
+51,254,06-03-2024,143,2,Vikarabad,Kodangal,Credit Card,69.98
+52,56,06-03-2024,136,1,Warangal,Hanamkonda,Debit Card,14.99
+53,139,06-03-2024,140,3,Medchal,Hyderabad,Cash,44.97
+54,93,07-03-2024,132,2,Karimnagar,Kondagattu,Debit Card,199.98
+55,250,07-03-2024,129,1,Vikarabad,Kodangal,Credit Card,49.99
+56,159,08-03-2024,131,1,Warangal,Hanamkonda,Cash,29.99
+57,150,08-03-2024,127,2,Medchal,Hyderabad,Credit Card,79.98
+58,2,08-03-2024,146,1,Karimnagar,Kondagattu,Cash,24.99
+59,43,09-03-2024,101,3,Vikarabad,Kodangal,Debit Card,2699.97
+60,185,09-03-2024,149,1,Warangal,Hanamkonda,Cash,39.99
+61,128,10-03-2024,136,2,Medchal,Hyderabad,Credit Card,29.98
+62,216,10-03-2024,112,1,Karimnagar,Kondagattu,Cash,39.99
+63,26,10-03-2024,138,2,Vikarabad,Kodangal,Debit Card,39.98
+64,292,11-03-2024,141,1,Warangal,Hanamkonda,Cash,9.99
+65,139,11-03-2024,150,2,Medchal,Hyderabad,Credit Card,59.98
+66,260,11-03-2024,128,1,Karimnagar,Kondagattu,Cash,59.99
+67,288,12-03-2024,113,3,Vikarabad,Kodangal,Debit Card,299.97
+68,149,12-03-2024,129,1,Warangal,Hanamkonda,Cash,49.99
+69,176,13-03-2024,150,2,Medchal,Hyderabad,Credit Card,59.98
+70,289,13-03-2024,120,1,Karimnagar,Kondagattu,Cash,399.99
+71,91,14-03-2024,126,3,Vikarabad,Kodangal,Debit Card,209.97
+72,209,14-03-2024,144,1,Warangal,Hanamkonda,Cash,9.99
+73,2,14-03-2024,138,2,Medchal,Hyderabad,Credit Card,39.98
+74,91,15-03-2024,120,1,Karimnagar,Kondagattu,Cash,399.99
+75,249,15-03-2024,148,2,Vikarabad,Kodangal,Debit Card,29.98
+76,165,15-03-2024,102,1,Warangal,Hanamkonda,Cash,699.99
+77,153,16-03-2024,144,3,Medchal,Hyderabad,Credit Card,29.97
+78,44,16-03-2024,108,1,Karimnagar,Kondagattu,Cash,129.99
+79,27,17-03-2024,129,2,Vikarabad,Kodangal,Debit Card,99.98
+80,93,17-03-2024,143,1,Warangal,Hanamkonda,Cash,34.99
+81,79,05-04-2024,124,2,Vikarabad,Kodangal,Credit Card,99.98
+82,213,05-04-2024,117,1,Warangal,Hanamkonda,Debit Card,299.99
+83,85,06-04-2024,120,3,Medchal,Hyderabad,Cash,1199.97
+84,58,06-04-2024,141,1,Karimnagar,Kondagattu,Debit Card,9.99
+85,119,07-04-2024,104,2,Vikarabad,Kodangal,Credit Card,599.98
+86,90,07-04-2024,105,1,Warangal,Hanamkonda,Cash,199.99
+87,15,08-04-2024,138,2,Medchal,Hyderabad,Credit Card,39.98
+88,131,08-04-2024,124,1,Karimnagar,Kondagattu,Cash,49.99
+89,56,09-04-2024,125,3,Vikarabad,Kodangal,Debit Card,89.97
+90,110,09-04-2024,150,1,Warangal,Hanamkonda,Cash,29.99
+91,85,10-04-2024,148,2,Medchal,Hyderabad,Credit Card,29.98
+92,41,10-04-2024,126,1,Karimnagar,Kondagattu,Cash,69.99
+93,287,11-04-2024,150,3,Vikarabad,Kodangal,Debit Card,89.97
+94,65,11-04-2024,120,1,Warangal,Hanamkonda,Cash,399.99
+95,286,12-04-2024,122,2,Medchal,Hyderabad,Credit Card,199.98
+96,147,12-04-2024,124,1,Karimnagar,Kondagattu,Cash,49.99
+97,51,13-04-2024,127,2,Vikarabad,Kodangal,Debit Card,79.98
+98,3,13-04-2024,115,1,Warangal,Hanamkonda,Cash,499.99
+99,79,14-04-2024,112,3,Medchal,Hyderabad,Credit Card,119.97
+100,212,14-04-2024,143,1,Karimnagar,Kondagattu,Cash,34.99
+101,64,15-04-2024,132,2,Vikarabad,Kodangal,Debit Card,199.98
+102,196,15-04-2024,129,1,Warangal,Hanamkonda,Cash,49.99
+103,47,16-04-2024,119,3,Medchal,Hyderabad,Credit Card,899.97
+104,56,16-04-2024,112,1,Karimnagar,Kondagattu,Cash,39.99
+105,214,17-04-2024,126,2,Vikarabad,Kodangal,Debit Card,139.98
+106,180,17-04-2024,135,1,Warangal,Hanamkonda,Cash,19.99
+107,135,18-04-2024,146,2,Medchal,Hyderabad,Credit Card,49.98
+108,82,18-04-2024,144,1,Karimnagar,Kondagattu,Cash,9.99
+109,81,19-04-2024,113,3,Vikarabad,Kodangal,Debit Card,299.97
+110,143,19-04-2024,116,1,Warangal,Hanamkonda,Cash,149.99
+111,260,05-05-2024,120,2,Vikarabad,Kodangal,Credit Card,799.98
+112,72,05-05-2024,113,1,Warangal,Hanamkonda,Debit Card,99.99
+113,6,06-05-2024,125,3,Medchal,Hyderabad,Cash,89.97
+114,71,06-05-2024,104,1,Karimnagar,Kondagattu,Debit Card,299.99
+115,96,07-05-2024,149,2,Vikarabad,Kodangal,Credit Card,79.98
+116,81,07-05-2024,119,1,Warangal,Hanamkonda,Cash,299.99
+117,150,08-05-2024,122,2,Medchal,Hyderabad,Credit Card,199.98
+118,299,08-05-2024,124,1,Karimnagar,Kondagattu,Cash,49.99
+119,72,09-05-2024,104,3,Vikarabad,Kodangal,Debit Card,899.97
+120,142,09-05-2024,132,1,Warangal,Hanamkonda,Cash,99.99
+121,181,10-05-2024,149,2,Medchal,Hyderabad,Credit Card,79.98
+122,102,10-05-2024,110,1,Karimnagar,Kondagattu,Cash,399.99
+123,98,11-05-2024,117,3,Vikarabad,Kodangal,Debit Card,899.97
+124,198,11-05-2024,117,1,Warangal,Hanamkonda,Cash,299.99
+125,11,12-05-2024,130,2,Medchal,Hyderabad,Credit Card,399.98
+126,58,12-05-2024,150,1,Karimnagar,Kondagattu,Cash,29.99
+127,231,13-05-2024,139,2,Vikarabad,Kodangal,Debit Card,49.98
+128,90,13-05-2024,119,1,Warangal,Hanamkonda,Cash,299.99
+129,171,14-05-2024,104,3,Medchal,Hyderabad,Credit Card,899.97
+130,128,14-05-2024,112,1,Karimnagar,Kondagattu,Cash,39.99
+131,178,15-05-2024,117,2,Vikarabad,Kodangal,Debit Card,599.98
+132,240,15-05-2024,135,1,Warangal,Hanamkonda,Cash,19.99
+133,213,16-05-2024,113,3,Medchal,Hyderabad,Credit Card,299.97
+134,142,16-05-2024,142,1,Karimnagar,Kondagattu,Cash,29.99
+135,255,17-05-2024,145,2,Vikarabad,Kodangal,Debit Card,99.98
+136,128,17-05-2024,138,1,Warangal,Hanamkonda,Cash,19.99
+137,90,18-05-2024,110,2,Medchal,Hyderabad,Credit Card,799.98
+138,108,18-05-2024,128,1,Karimnagar,Kondagattu,Cash,59.99
+139,62,19-05-2024,127,3,Vikarabad,Kodangal,Debit Card,119.97
+140,140,19-05-2024,148,1,Warangal,Hanamkonda,Cash,14.99
+141,119,04-06-2024,136,2,Vikarabad,Kodangal,Credit Card,29.98
+142,165,04-06-2024,131,1,Warangal,Hanamkonda,Debit Card,29.99
+143,212,05-06-2024,118,3,Medchal,Hyderabad,Cash,599.97
+144,219,05-06-2024,119,1,Karimnagar,Kondagattu,Debit Card,299.99
+145,89,06-06-2024,107,2,Vikarabad,Kodangal,Credit Card,59.98
+146,287,06-06-2024,109,1,Warangal,Hanamkonda,Cash,49.99
+147,129,07-06-2024,120,2,Medchal,Hyderabad,Credit Card,799.98
+148,79,07-06-2024,146,1,Karimnagar,Kondagattu,Cash,24.99
+149,218,08-06-2024,130,3,Vikarabad,Kodangal,Debit Card,599.97
+150,72,08-06-2024,126,1,Warangal,Hanamkonda,Cash,69.99
+151,163,09-06-2024,150,2,Medchal,Hyderabad,Credit Card,59.98
+152,5,09-06-2024,131,1,Karimnagar,Kondagattu,Cash,29.99
+153,282,10-06-2024,145,3,Vikarabad,Kodangal,Debit Card,149.97
+154,109,10-06-2024,143,1,Warangal,Hanamkonda,Cash,34.99
+155,282,11-06-2024,118,2,Medchal,Hyderabad,Credit Card,399.98
+156,234,11-06-2024,127,1,Karimnagar,Kondagattu,Cash,39.99
+157,135,12-06-2024,126,2,Vikarabad,Kodangal,Debit Card,139.98
+158,12,12-06-2024,125,1,Warangal,Hanamkonda,Cash,29.99
+159,240,13-06-2024,142,3,Medchal,Hyderabad,Credit Card,89.97
+160,246,13-06-2024,107,1,Karimnagar,Kondagattu,Cash,29.99
+161,109,14-06-2024,137,2,Vikarabad,Kodangal,Debit Card,59.98
+162,78,14-06-2024,111,1,Warangal,Hanamkonda,Cash,149.99
+163,44,15-06-2024,109,3,Medchal,Hyderabad,Credit Card,149.97
+164,102,15-06-2024,115,1,Karimnagar,Kondagattu,Cash,499.99
+165,119,16-06-2024,141,2,Vikarabad,Kodangal,Debit Card,19.98
+166,219,16-06-2024,133,1,Warangal,Hanamkonda,Cash,79.99
+167,106,17-06-2024,148,2,Medchal,Hyderabad,Credit Card,29.98
+168,58,17-06-2024,109,1,Karimnagar,Kondagattu,Cash,49.99
+169,204,18-06-2024,141,3,Vikarabad,Kodangal,Debit Card,29.97
+170,61,18-06-2024,143,1,Warangal,Hanamkonda,Cash,34.99
+171,111,04-07-2024,147,2,Vikarabad,Kodangal,Credit Card,39.98
+172,145,04-07-2024,140,1,Warangal,Hanamkonda,Debit Card,14.99
+173,71,05-07-2024,104,3,Medchal,Hyderabad,Cash,899.97
+174,76,05-07-2024,107,1,Karimnagar,Kondagattu,Debit Card,29.99
+175,155,06-07-2024,121,2,Vikarabad,Kodangal,Credit Card,39.98
+176,191,06-07-2024,149,1,Warangal,Hanamkonda,Cash,39.99
+177,239,07-07-2024,118,2,Medchal,Hyderabad,Credit Card,399.98
+178,253,07-07-2024,115,1,Karimnagar,Kondagattu,Cash,499.99
+179,219,08-07-2024,103,3,Vikarabad,Kodangal,Debit Card,449.97
+180,196,08-07-2024,126,1,Warangal,Hanamkonda,Cash,69.99
+181,118,09-07-2024,101,2,Medchal,Hyderabad,Credit Card,1799.98
+182,156,09-07-2024,144,1,Karimnagar,Kondagattu,Cash,9.99
+183,174,10-07-2024,129,3,Vikarabad,Kodangal,Debit Card,149.97
+184,156,10-07-2024,103,1,Warangal,Hanamkonda,Cash,149.99
+185,198,11-07-2024,119,2,Medchal,Hyderabad,Credit Card,599.98
+186,144,11-07-2024,107,1,Karimnagar,Kondagattu,Cash,29.99
+187,185,12-07-2024,125,2,Vikarabad,Kodangal,Debit Card,59.98
+188,55,12-07-2024,128,1,Warangal,Hanamkonda,Cash,59.99
+189,220,13-07-2024,148,3,Medchal,Hyderabad,Credit Card,44.97
+190,58,13-07-2024,125,1,Karimnagar,Kondagattu,Cash,29.99
+191,235,14-07-2024,142,2,Vikarabad,Kodangal,Debit Card,59.98
+192,235,14-07-2024,141,1,Warangal,Hanamkonda,Cash,9.99
+193,197,15-07-2024,135,3,Medchal,Hyderabad,Credit Card,59.97
+194,101,15-07-2024,116,1,Karimnagar,Kondagattu,Cash,149.99
+195,181,16-07-2024,111,2,Vikarabad,Kodangal,Debit Card,299.98
+196,80,16-07-2024,125,1,Warangal,Hanamkonda,Cash,29.99
+197,119,17-07-2024,118,2,Medchal,Hyderabad,Credit Card,399.98
+198,208,17-07-2024,143,1,Karimnagar,Kondagattu,Cash,34.99
+199,154,18-07-2024,103,3,Vikarabad,Kodangal,Debit Card,449.97
+200,124,18-07-2024,150,1,Warangal,Hanamkonda,Cash,29.99
+201,199,03-08-2024,102,2,Vikarabad,Kodangal,Credit Card,1399.98
+202,46,03-08-2024,127,1,Warangal,Hanamkonda,Debit Card,39.99
+203,251,04-08-2024,134,3,Medchal,Hyderabad,Cash,119.97
+204,268,04-08-2024,122,1,Karimnagar,Kondagattu,Debit Card,99.99
+205,67,05-08-2024,134,2,Vikarabad,Kodangal,Credit Card,79.98
+206,247,05-08-2024,103,1,Warangal,Hanamkonda,Cash,149.99
+207,23,06-08-2024,132,2,Medchal,Hyderabad,Credit Card,199.98
+208,244,06-08-2024,104,1,Karimnagar,Kondagattu,Cash,299.99
+209,161,07-08-2024,135,3,Vikarabad,Kodangal,Debit Card,59.97
+210,200,07-08-2024,146,1,Warangal,Hanamkonda,Cash,24.99
+211,60,08-08-2024,146,2,Medchal,Hyderabad,Credit Card,49.98
+212,65,08-08-2024,104,1,Karimnagar,Kondagattu,Cash,299.99
+213,157,09-08-2024,105,3,Vikarabad,Kodangal,Debit Card,599.97
+214,232,09-08-2024,112,1,Warangal,Hanamkonda,Cash,39.99
+215,242,10-08-2024,146,2,Medchal,Hyderabad,Credit Card,49.98
+216,293,10-08-2024,139,1,Karimnagar,Kondagattu,Cash,24.99
+217,163,11-08-2024,104,2,Vikarabad,Kodangal,Debit Card,599.98
+218,22,11-08-2024,140,1,Warangal,Hanamkonda,Cash,14.99
+219,266,12-08-2024,142,3,Medchal,Hyderabad,Credit Card,89.97
+220,250,12-08-2024,115,1,Karimnagar,Kondagattu,Cash,499.99
+221,230,13-08-2024,130,2,Vikarabad,Kodangal,Debit Card,399.98
+222,298,13-08-2024,143,1,Warangal,Hanamkonda,Cash,34.99
+223,63,14-08-2024,143,3,Medchal,Hyderabad,Credit Card,104.97
+224,52,14-08-2024,133,1,Karimnagar,Kondagattu,Cash,79.99
+225,248,15-08-2024,112,2,Vikarabad,Kodangal,Debit Card,79.98
+226,133,15-08-2024,146,1,Warangal,Hanamkonda,Cash,24.99
+227,63,16-08-2024,121,2,Medchal,Hyderabad,Credit Card,39.98
+228,207,16-08-2024,129,1,Karimnagar,Kondagattu,Cash,49.99
+229,58,17-08-2024,134,3,Vikarabad,Kodangal,Debit Card,119.97
+230,2,17-08-2024,122,1,Warangal,Hanamkonda,Cash,99.99
+231,76,18-08-2024,134,2,Vikarabad,Kodangal,Credit Card,79.98
+232,217,18-08-2024,120,1,Warangal,Hanamkonda,Debit Card,399.99
+233,281,19-08-2024,145,3,Medchal,Hyderabad,Cash,149.97
+234,295,19-08-2024,137,1,Karimnagar,Kondagattu,Debit Card,29.99
+235,167,20-08-2024,111,2,Vikarabad,Kodangal,Credit Card,299.98
+236,32,20-08-2024,127,1,Warangal,Hanamkonda,Cash,39.99
+237,298,21-08-2024,123,2,Medchal,Hyderabad,Credit Card,159.98
+238,240,21-08-2024,122,1,Karimnagar,Kondagattu,Cash,99.99
+239,34,22-08-2024,137,3,Vikarabad,Kodangal,Debit Card,89.97
+240,52,22-08-2024,115,1,Warangal,Hanamkonda,Cash,499.99
+241,282,23-08-2024,106,2,Medchal,Hyderabad,Credit Card,159.98
+242,158,23-08-2024,139,1,Karimnagar,Kondagattu,Cash,24.99
+243,51,24-08-2024,134,3,Vikarabad,Kodangal,Debit Card,119.97
+244,133,24-08-2024,148,1,Warangal,Hanamkonda,Cash,14.99
+245,89,25-08-2024,129,2,Medchal,Hyderabad,Credit Card,99.98
+246,87,25-08-2024,124,1,Karimnagar,Kondagattu,Cash,49.99
+247,50,26-08-2024,144,2,Vikarabad,Kodangal,Debit Card,19.98
+248,139,26-08-2024,108,1,Warangal,Hanamkonda,Cash,129.99
+249,131,27-08-2024,131,3,Medchal,Hyderabad,Credit Card,89.97
+250,235,27-08-2024,149,1,Karimnagar,Kondagattu,Cash,39.99
+251,225,28-08-2024,150,2,Vikarabad,Kodangal,Debit Card,59.98
+252,172,28-08-2024,129,1,Warangal,Hanamkonda,Cash,49.99
+253,69,29-08-2024,101,3,Medchal,Hyderabad,Credit Card,2699.97
+254,53,29-08-2024,126,1,Karimnagar,Kondagattu,Cash,69.99
+255,73,30-08-2024,123,2,Vikarabad,Kodangal,Debit Card,159.98
+256,268,30-08-2024,128,1,Warangal,Hanamkonda,Cash,59.99
+257,162,31-08-2024,139,2,Medchal,Hyderabad,Credit Card,49.98
+258,163,31-08-2024,146,1,Karimnagar,Kondagattu,Cash,24.99
+259,184,01-09-2024,112,3,Vikarabad,Kodangal,Debit Card,119.97
+260,198,01-09-2024,136,1,Warangal,Hanamkonda,Cash,14.99
+261,80,17-09-2024,130,2,Vikarabad,Kodangal,Credit Card,399.98
+262,250,17-09-2024,108,1,Warangal,Hanamkonda,Debit Card,129.99
+263,97,18-09-2024,109,3,Medchal,Hyderabad,Cash,149.97
+264,71,18-09-2024,145,1,Karimnagar,Kondagattu,Debit Card,49.99
+265,254,19-09-2024,141,2,Vikarabad,Kodangal,Credit Card,19.98
+266,160,19-09-2024,135,1,Warangal,Hanamkonda,Cash,19.99
+267,191,20-09-2024,121,2,Medchal,Hyderabad,Credit Card,39.98
+268,37,20-09-2024,150,1,Karimnagar,Kondagattu,Cash,29.99
+269,14,21-09-2024,120,3,Vikarabad,Kodangal,Debit Card,1199.97
+270,77,21-09-2024,150,1,Warangal,Hanamkonda,Cash,29.99
+271,259,22-09-2024,101,2,Medchal,Hyderabad,Credit Card,1799.98
+272,3,22-09-2024,112,1,Karimnagar,Kondagattu,Cash,39.99
+273,258,23-09-2024,137,3,Vikarabad,Kodangal,Debit Card,89.97
+274,300,23-09-2024,137,1,Warangal,Hanamkonda,Cash,29.99
+275,105,24-09-2024,116,2,Medchal,Hyderabad,Credit Card,299.98
+276,172,24-09-2024,117,1,Karimnagar,Kondagattu,Cash,299.99
+277,164,25-09-2024,115,2,Vikarabad,Kodangal,Debit Card,999.98
+278,129,25-09-2024,127,1,Warangal,Hanamkonda,Cash,39.99
+279,96,26-09-2024,148,3,Medchal,Hyderabad,Credit Card,44.97
+280,17,26-09-2024,139,1,Karimnagar,Kondagattu,Cash,24.99
+281,150,27-09-2024,148,2,Vikarabad,Kodangal,Debit Card,29.98
+282,242,27-09-2024,144,1,Warangal,Hanamkonda,Cash,9.99
+283,243,28-09-2024,122,3,Medchal,Hyderabad,Credit Card,299.97
+284,188,28-09-2024,141,1,Karimnagar,Kondagattu,Cash,9.99
+285,233,29-09-2024,117,2,Vikarabad,Kodangal,Debit Card,599.98
+286,52,29-09-2024,116,1,Warangal,Hanamkonda,Cash,149.99
+287,123,30-09-2024,125,2,Medchal,Hyderabad,Credit Card,59.98
+288,110,30-09-2024,105,1,Karimnagar,Kondagattu,Cash,199.99
+289,142,01-10-2024,148,3,Vikarabad,Kodangal,Debit Card,44.97
+290,9,01-10-2024,111,1,Warangal,Hanamkonda,Cash,149.99
+291,254,02-10-2024,137,2,Medchal,Hyderabad,Debit Card,59.98
+292,43,02-10-2024,131,1,Karimnagar,Kondagattu,Cash,29.99
+293,291,03-10-2024,137,3,Vikarabad,Kodangal,Debit Card,89.97
+294,39,03-10-2024,115,1,Warangal,Hanamkonda,Cash,499.99
+295,86,04-10-2024,133,2,Medchal,Hyderabad,Credit Card,159.98
+296,48,04-10-2024,150,1,Karimnagar,Kondagattu,Debit Card,29.99
+297,146,05-10-2024,117,3,Vikarabad,Kodangal,Debit Card,899.97
+298,51,05-10-2024,150,1,Warangal,Hanamkonda,Cash,29.99
+299,287,06-10-2024,118,2,Medchal,Hyderabad,Credit Card,399.98
+300,291,06-10-2024,111,1,Karimnagar,Kondagattu,Cash,149.99
+301,241,07-10-2024,108,3,Vikarabad,Kodangal,Debit Card,389.97
+302,81,07-10-2024,133,1,Warangal,Hanamkonda,Cash,79.99
+303,128,08-10-2024,109,2,Medchal,Hyderabad,Credit Card,99.98
+304,228,08-10-2024,109,1,Karimnagar,Kondagattu,Debit Card,49.99
+305,87,09-10-2024,147,3,Vikarabad,Kodangal,Debit Card,59.97
+306,72,09-10-2024,147,1,Warangal,Hanamkonda,Cash,19.99
+307,158,10-10-2024,122,2,Medchal,Hyderabad,Credit Card,199.98
+308,87,10-10-2024,133,1,Karimnagar,Kondagattu,Cash,79.99
+309,37,11-10-2024,145,2,Vikarabad,Kodangal,Debit Card,99.98
+310,291,11-10-2024,134,1,Warangal,Hanamkonda,Cash,39.99
+311,109,12-10-2024,135,3,Medchal,Hyderabad,Credit Card,59.97
+312,78,12-10-2024,101,1,Karimnagar,Kondagattu,Cash,899.99
+313,183,13-10-2024,132,2,Vikarabad,Kodangal,Debit Card,199.98
+314,84,13-10-2024,115,1,Warangal,Hanamkonda,Cash,499.99
+315,276,14-10-2024,117,3,Medchal,Hyderabad,Credit Card,899.97
+316,157,14-10-2024,136,1,Karimnagar,Kondagattu,Cash,14.99
+317,193,15-10-2024,106,2,Vikarabad,Kodangal,Debit Card,159.98
+318,45,15-10-2024,127,1,Warangal,Hanamkonda,Cash,39.99
+319,153,16-10-2024,125,2,Medchal,Hyderabad,Credit Card,59.98
+320,87,16-10-2024,114,1,Karimnagar,Kondagattu,Cash,199.99
+321,134,17-10-2024,119,2,Vikarabad,Kodangal,Credit Card,599.98
+322,184,17-10-2024,103,1,Warangal,Hanamkonda,Debit Card,149.99
+323,94,18-10-2024,101,3,Medchal,Hyderabad,Cash,2699.97
+324,53,18-10-2024,131,1,Karimnagar,Kondagattu,Debit Card,29.99
+325,84,19-10-2024,125,2,Vikarabad,Kodangal,Credit Card,59.98
+326,172,19-10-2024,138,1,Warangal,Hanamkonda,Cash,19.99
+327,128,20-10-2024,101,2,Medchal,Hyderabad,Credit Card,1799.98
+328,123,20-10-2024,130,1,Karimnagar,Kondagattu,Cash,199.99
+329,212,21-10-2024,144,3,Vikarabad,Kodangal,Debit Card,29.97
+330,94,21-10-2024,137,1,Warangal,Hanamkonda,Cash,29.99
+331,240,22-10-2024,125,2,Medchal,Hyderabad,Credit Card,59.98
+332,208,22-10-2024,126,1,Karimnagar,Kondagattu,Cash,69.99
+333,35,23-10-2024,119,3,Vikarabad,Kodangal,Debit Card,899.97
+334,63,23-10-2024,148,1,Warangal,Hanamkonda,Cash,14.99
+335,132,24-10-2024,113,2,Medchal,Hyderabad,Credit Card,199.98
+336,19,24-10-2024,147,1,Karimnagar,Kondagattu,Cash,19.99
+337,180,25-10-2024,129,2,Vikarabad,Kodangal,Debit Card,99.98
+338,186,25-10-2024,109,1,Warangal,Hanamkonda,Cash,49.99
+339,126,26-10-2024,136,3,Medchal,Hyderabad,Credit Card,44.97
+340,30,26-10-2024,149,1,Karimnagar,Kondagattu,Cash,39.99
+341,226,27-10-2024,148,2,Vikarabad,Kodangal,Debit Card,29.98
+342,198,27-10-2024,149,1,Warangal,Hanamkonda,Cash,39.99
+343,178,28-10-2024,115,3,Medchal,Hyderabad,Credit Card,1499.97
+344,137,28-10-2024,135,1,Karimnagar,Kondagattu,Cash,19.99
+345,76,29-10-2024,122,2,Vikarabad,Kodangal,Debit Card,199.98
+346,219,29-10-2024,122,1,Warangal,Hanamkonda,Cash,99.99
+347,294,30-10-2024,123,2,Medchal,Hyderabad,Credit Card,159.98
+348,165,30-10-2024,144,1,Karimnagar,Kondagattu,Cash,9.99
+349,244,31-10-2024,106,3,Vikarabad,Kodangal,Debit Card,239.97
+350,290,31-10-2024,121,1,Warangal,Hanamkonda,Cash,19.99

@@ -1,0 +1,51 @@
+Product ID,Product Name,Product Cost,Product Category
+101,Laptop,899.99,Electronics
+102,Smartphone,699.99,Electronics
+103,Headphones,149.99,Electronics
+104,Tablet,299.99,Electronics
+105,Smartwatch,199.99,Electronics
+106,Bluetooth Speaker,79.99,Electronics
+107,Wireless Mouse,29.99,Electronics
+108,External Hard Drive,129.99,Electronics
+109,Wireless Keyboard,49.99,Electronics
+110,Gaming Console,399.99,Electronics
+111,Desk Chair,149.99,Furniture
+112,Desk Lamp,39.99,Home & Office
+113,Bookshelf,99.99,Furniture
+114,Office Desk,199.99,Furniture
+115,Sofa,499.99,Furniture
+116,Coffee Table,149.99,Furniture
+117,Dining Table,299.99,Furniture
+118,Dining Chairs (Set of 4),199.99,Furniture
+119,Bed Frame,299.99,Home & Bedroom
+120,Mattress,399.99,Home & Bedroom
+121,Pillow,19.99,Home & Bedroom
+122,Bedside Table,99.99,Home & Bedroom
+123,Comforter Set,79.99,Home & Bedroom
+124,Curtains (Set of 2),49.99,Home & Bedroom
+125,Throw Blanket,29.99,Home & Bedroom
+126,Area Rug,69.99,Home & Bedroom
+127,Toaster,39.99,Kitchen & Dining
+128,Coffee Maker,59.99,Kitchen & Dining
+129,Blender,49.99,Kitchen & Dining
+130,Stand Mixer,199.99,Kitchen & Dining
+131,Knife Set,29.99,Kitchen & Dining
+132,Cookware Set,99.99,Kitchen & Dining
+133,Dinnerware Set,79.99,Kitchen & Dining
+134,Glassware Set,39.99,Kitchen & Dining
+135,Food Storage Containers,19.99,Kitchen & Dining
+136,Cutting Board,14.99,Kitchen & Dining
+137,Bath Towel Set,29.99,Bath & Towels
+138,Shower Curtain,19.99,Bath & Towels
+139,Bathroom Rug,24.99,Bath & Towels
+140,Toilet Brush and Holder,14.99,Bath & Towels
+141,Soap Dispenser,9.99,Bath & Towels
+142,Trash Can,29.99,Bath & Towels
+143,Laundry Hamper,34.99,Bath & Towels
+144,Toothbrush Holder,9.99,Bath & Towels
+145,Wall Mirror,49.99,Home Decor
+146,Throw Pillow (Set of 2),24.99,Home Decor
+147,Wall Clock,19.99,Home Decor
+148,Picture Frame,14.99,Home Decor
+149,Wall Art,39.99,Home Decor
+150,Decorative Vase,29.99,Home Decor

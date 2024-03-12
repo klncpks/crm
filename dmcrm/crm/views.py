@@ -6,7 +6,7 @@ from django.http import HttpResponse, JsonResponse
 def home(request):
     try:
         # Specify the path to the CSV file
-        csv_file_path = r'C:/MP Dataset/customer_information.csv'
+        csv_file_path = r'C:/Users/Akash Reddy/OneDrive/Documents/GitHub/crm/datasets/customer_information.csv'
         
         # Read the CSV file
         with open(csv_file_path, 'r', encoding='utf-8') as file:
