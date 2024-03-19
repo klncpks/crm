@@ -8,8 +8,8 @@ urlpatterns = [
     path('home/',views.home),
     path('products/',views.products),
     path('products/top5/',views.productsTop5),
-    path('leastPurchased/',views.leastPurchased),
-    path('topRevenue/',views.topRevenue), 
-    path('leastRevenue/',views.leastRevenue),
+    path('products/leastPurchased/',views.leastPurchased),
+    path('products/topRevenue/',views.topRevenue), 
+    path('products/leastRevenue/',views.leastRevenue),
 ]
 

@@ -6,48 +6,39 @@ from collections import defaultdict
 from operator import itemgetter
 import pandas as pd
 
+# Load products data
+products_file_path = r'C:/Users/Akash Reddy/OneDrive/Documents/GitHub/crm/datasets/products.csv'
+with open(products_file_path, 'r', encoding='utf-8') as products_file:
+    products_data = list(csv.DictReader(products_file))
+
+# Load purchase history data
+purchase_history_file_path = r'C:/Users/Akash Reddy/OneDrive/Documents/GitHub/crm/datasets/purchase_history.csv'
+with open(purchase_history_file_path, 'r', encoding='utf-8') as purchase_history_file:
+    purchase_history_data = list(csv.DictReader(purchase_history_file))
+
+# Load customer information data
+customer_info_file_path = r'C:/Users/Akash Reddy/OneDrive/Documents/GitHub/crm/datasets/customer_information.csv'
+with open(customer_info_file_path, 'r', encoding='utf-8') as customer_info_file:
+    customer_info_data = list(csv.DictReader(customer_info_file))
+
 def home(request):
     try:
-    # Specify the path to the CSV file
-        csv_file_path = r'C:/Users/Akash Reddy/OneDrive/Documents/GitHub/crm/datasets/customer_information.csv'
-
-    # Read the CSV file
-        with open(csv_file_path, 'r', encoding='utf-8') as file:
-            csv_reader = csv.DictReader(file)
-            data = [row for row in csv_reader]
-
-    # Convert CSV data to JSON
-        json_data = json.dumps({'status': 'success', 'data': data})
-
+        json_data = json.dumps({'status': 'success', 'data': customer_info_data})
         return JsonResponse(json.loads(json_data))
-
     except FileNotFoundError:
         return JsonResponse({'status': 'error', 'message': 'File not found'}, status=404)
-
     except Exception as e:
         return JsonResponse({'status': 'error', 'message': str(e)}, status=500)
 
 def products(request):
     try:
-    # Specify the path to the CSV file
-        csv_file_path = r'C:/Users/Akash Reddy/OneDrive/Documents/GitHub/crm/datasets/products.csv'
-
-    # Read the CSV file
-        with open(csv_file_path, 'r', encoding='utf-8') as file:
-            csv_reader = csv.DictReader(file)
-            data = [row for row in csv_reader]
-
-    # Convert CSV data to JSON
-        json_data = json.dumps({'status': 'success', 'data': data})
-
+        json_data = json.dumps({'status': 'success', 'data': products_data})
         return JsonResponse(json.loads(json_data))
-
     except FileNotFoundError:
         return JsonResponse({'status': 'error', 'message': 'File not found'}, status=404)
-
     except Exception as e:
         return JsonResponse({'status': 'error', 'message': str(e)}, status=500)
-
+    
 def productsTop5(request):
     try:
         # Specify the path to the CSV files
@@ -114,10 +105,9 @@ def leastPurchased(request):
         json_result = []
         for item in json_data:
             json_result.append({
-                "Ranking": item["Ranking"],
-                "Product Name": item["Product Name"],
-                "Units Sold": int(item["Quantity"]),
-                "Revenue Generated": round(item["Total amount"], 2)
+                "product_name": item["Product Name"],
+                "total_sold_units": int(item["Quantity"]),
+                "total_revenue": round(item["Total amount"], 2)
             })
         return JsonResponse({'status': 'success', 'data': json_result})
 
@@ -152,10 +142,9 @@ def topRevenue(request):
         json_result = []
         for item in json_data:
             json_result.append({
-                "Product Name": item["Product Name"],
-                "Units Sold": int(item["Quantity"]),
-                "Product Price": item["Product Cost"],
-                "Revenue Generated": round(item["Revenue Generated"], 2)
+                "product_name": item["Product Name"],
+                "total_sold_units": int(item["Quantity"]),
+                "total_revenue": round(item["Revenue Generated"], 2)
             })
         return JsonResponse({'status': 'success', 'data': json_result})
     except FileNotFoundError:
@@ -188,10 +177,9 @@ def leastRevenue(request):
         json_result = []
         for item in json_data:
             json_result.append({
-                "Product Name": item["Product Name"],
-                "Units Sold": int(item["Quantity"]),
-                "Product Price": item["Product Cost"],
-                "Revenue Generated": round(item["Revenue Generated"], 2)
+                "product_name": item["Product Name"],
+                "total_sold_units": int(item["Quantity"]),
+                "total_revenue": round(item["Revenue Generated"], 2)
             })
         return JsonResponse({'status': 'success', 'data': json_result})
     except FileNotFoundError:
