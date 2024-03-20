@@ -187,3 +187,20 @@ def leastRevenue(request):
 
     except Exception as e:
         return JsonResponse({'status': 'error', 'message': str(e)}, status=500)
+def extractList(request, filter_type):
+    try:
+        # Check if the requested attribute is valid
+        valid_attributes = products_data[0].keys()
+        if filter_type not in valid_attributes:
+            return JsonResponse({'status': 'error', 'message': 'Invalid attribute'}, status=400)
+
+        # Extract unique values for the requested attribute
+        unique_values = set(product[filter_type] for product in products_data)
+
+        # Convert the set of unique values to a list
+        unique_values_list = list(unique_values)
+
+        return JsonResponse({'status': 'success', 'data': unique_values_list})
+
+    except Exception as e:
+        return JsonResponse({'status': 'error', 'message': str(e)}, status=500)

@@ -1,0 +1,53 @@
+purchase_history Attributes
+
+Transaction ID
+Employee ID	
+Customer ID	
+Date of Purchase	
+Product ID	
+Quantity	
+Region	
+Branch	
+Payment Mode	
+Total amount
+
+products Attributes
+
+Product ID	
+Product Name	
+Product Cost	
+Product Category
+
+feedback Attributes
+
+Transaction ID	
+Customer ID	
+Rating	
+Comments
+
+interactions Attributes
+
+Interaction ID	
+Customer ID	
+Date of Interaction	
+Interaction Type	
+Purpose of Interaction	
+Outcome of Interaction
+
+employee_data Attributes
+
+Employee ID	
+Employee Name	
+Contact No	
+Email ID
+
+customer_information Attributes
+
+Customer ID	
+Name	
+Email	
+Phone number	
+Address	
+Age	
+Gender
+
