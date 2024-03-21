@@ -32,11 +32,10 @@ def home(request):
         return JsonResponse({'status': 'error', 'message': str(e)}, status=500)
 
 def products(request):
+    result = products_json()
     try:
-        json_data = json.dumps({'status': 'success', 'data': products_data})
+        json_data = json.dumps({'status':'success', 'data': result})
         return JsonResponse(json.loads(json_data))
-    except FileNotFoundError:
-        return JsonResponse({'status': 'error', 'message': 'File not found'}, status=404)
     except Exception as e:
         return JsonResponse({'status': 'error', 'message': str(e)}, status=500)
     
