@@ -5,7 +5,7 @@ from django.http import HttpResponse, JsonResponse
 from collections import defaultdict
 from operator import itemgetter
 import pandas as pd
-from .products import productsTop5, leastPurchased, topRevenue
+from .products import products_json,productsTop5, leastPurchased, topRevenue
 
 # Load products data
 products_file_path = r'C:/Users/Akash Reddy/OneDrive/Documents/GitHub/crm/datasets/products.csv'
