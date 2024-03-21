@@ -7,17 +7,17 @@ from operator import itemgetter
 import pandas as pd
 
 # Load products data
-products_file_path = r'.../datasets/products.csv'
+products_file_path = r'C:/Users/Akash Reddy/OneDrive/Documents/GitHub/crm/datasets/products.csv'
 with open(products_file_path, 'r', encoding='utf-8') as products_file:
     products_data = list(csv.DictReader(products_file))
 
 # Load purchase history data
-purchase_history_file_path = r'.../datasets/purchase_history.csv'
+purchase_history_file_path = r'C:/Users/Akash Reddy/OneDrive/Documents/GitHub/crm/datasets/purchase_history.csv'
 with open(purchase_history_file_path, 'r', encoding='utf-8') as purchase_history_file:
     purchase_history_data = list(csv.DictReader(purchase_history_file))
 
 # Load customer information data
-customer_info_file_path = r'.../datasets/customer_information.csv'
+customer_info_file_path = r'C:/Users/Akash Reddy/OneDrive/Documents/GitHub/crm/datasets/customer_information.csv'
 with open(customer_info_file_path, 'r', encoding='utf-8') as customer_info_file:
     customer_info_data = list(csv.DictReader(customer_info_file))
 
@@ -42,8 +42,8 @@ def products(request):
 def productsTop5(request):
     try:
         # Specify the path to the CSV files
-        purchase_history_path = r'.../datasets/purchase_history.csv'
-        products_path = r'.../datasets/products.csv'
+        purchase_history_path = r'C:/Users/Akash Reddy/OneDrive/Documents/GitHub/crm/datasets/purchase_history.csv'
+        products_path = r'C:/Users/Akash Reddy/OneDrive/Documents/GitHub/crm/datasets/products.csv'
 
         # Read purchase history CSV file
         purchase_data = defaultdict(lambda: {'total_quantity': 0, 'total_revenue': 0})
