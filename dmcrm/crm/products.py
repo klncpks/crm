@@ -20,7 +20,7 @@ def products_json():
 
     return prod_result
 
-def productsTop5():
+def products_Top5():
     # Read purchase history CSV file
     purchase_data = collections.defaultdict(lambda: {'total_quantity': 0, 'total_revenue': 0})
     with open(purchase_history_path, 'r', encoding='utf-8') as purchase_file:
@@ -49,7 +49,7 @@ def productsTop5():
 
     return top5_data
 
-def leastPurchased():
+def least_Purchased():
         products_df = pd.read_csv(products_path)
         purchase_history_df = pd.read_csv(purchase_history_path)
 
@@ -79,7 +79,7 @@ def leastPurchased():
             })
         return lsp_result
 
-def topRevenue():
+def top_Revenue():
     # Load datasets
         products_df = pd.read_csv(products_path)
         purchase_history_df = pd.read_csv(purchase_history_path)
@@ -109,7 +109,7 @@ def topRevenue():
             })
         return tpr_result
 
-def leastRevenue():
+def least_Revenue():
     products_df = pd.read_csv(products_path)
     purchase_history_df = pd.read_csv(purchase_history_path)
 

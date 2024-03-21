@@ -5,7 +5,7 @@ from django.http import HttpResponse, JsonResponse
 from collections import defaultdict
 from operator import itemgetter
 import pandas as pd
-from .products import products_json,productsTop5, leastPurchased, topRevenue
+from .products import products_json,products_Top5, least_Purchased, top_Revenue
 
 # Load products data
 products_file_path = r'C:/Users/Akash Reddy/OneDrive/Documents/GitHub/crm/datasets/products.csv'
@@ -40,7 +40,7 @@ def products(request):
         return JsonResponse({'status': 'error', 'message': str(e)}, status=500)
     
 def productsTop5(request):
-    result = productsTop5()
+    result = products_Top5()
     try:
         json_data = json.dumps({'status':'success', 'data': result})
         return JsonResponse(json.loads(json_data))
@@ -48,7 +48,7 @@ def productsTop5(request):
         return JsonResponse({'status': 'error', 'message': str(e)}, status=500)
 
 def leastPurchased(request):
-    result = leastPurchased()
+    result = least_Purchased()
     try:
         json_data = json.dumps({'status':'success', 'data': result})
         return JsonResponse(json.loads(json_data))
@@ -56,7 +56,7 @@ def leastPurchased(request):
         return JsonResponse({'status': 'error', 'message': str(e)}, status=500)
 
 def topRevenue(request):
-    result = topRevenue()
+    result = top_Revenue()
     try:
         json_data = json.dumps({'status':'success', 'data': result})
         return JsonResponse(json.loads(json_data))
@@ -64,7 +64,7 @@ def topRevenue(request):
         return JsonResponse({'status': 'error', 'message': str(e)}, status=500)
     
 def leastRevenue(request):
-    result = leastPurchased()
+    result = least_Purchased()
     try:
         json_data = json.dumps({'status':'success', 'data': result})
         return JsonResponse(json.loads(json_data))
