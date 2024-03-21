@@ -4,6 +4,22 @@ import pandas as pd
 purchase_history_path = r'C:/Users/Akash Reddy/OneDrive/Documents/GitHub/crm/datasets/purchase_history.csv'
 products_path = r'C:/Users/Akash Reddy/OneDrive/Documents/GitHub/crm/datasets/products.csv'
 
+def products_json():
+    # Read the CSV file and specify column names
+    column_names = ["product_id", "product_name", "product_cost", "product_category"]
+    df = pd.read_csv(products_path, names=column_names, header=0)
+    
+    # Convert DataFrame to JSON
+    json_data = df.to_dict(orient='records')
+
+    # Create the JSON response structure
+    prod_result = {
+        "status": "success",
+        "data": json_data
+    }
+
+    return prod_result
+
 def productsTop5():
     # Read purchase history CSV file
     purchase_data = collections.defaultdict(lambda: {'total_quantity': 0, 'total_revenue': 0})
