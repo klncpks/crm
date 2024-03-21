@@ -12,5 +12,7 @@ urlpatterns = [
     path('products/topRevenue/',views.topRevenue), 
     path('products/leastRevenue/',views.leastRevenue),
     path('products/<str:filter_type>/', views.extractList),
+    path('customers/',views.customers),
+    path('customers/top5/',views.top5Cust),
 ]
 

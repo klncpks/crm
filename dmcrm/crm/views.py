@@ -6,6 +6,7 @@ from collections import defaultdict
 from operator import itemgetter
 import pandas as pd
 from .products import products_json,products_Top5, least_Purchased, top_Revenue
+from .customers import top5Cust, customer_information
 
 # Load products data
 products_file_path = r'C:/Users/Akash Reddy/OneDrive/Documents/GitHub/crm/datasets/products.csv'
@@ -86,5 +87,21 @@ def extractList(request, filter_type):
 
         return JsonResponse({'status': 'success', 'data': unique_values_list})
 
+    except Exception as e:
+        return JsonResponse({'status': 'error', 'message': str(e)}, status=500)
+    
+def customers(request):
+    result = customer_information()
+    try:
+        json_data = json.dumps({'status':'success', 'data': result})
+        return JsonResponse(json.loads(json_data))
+    except Exception as e:
+        return JsonResponse({'status': 'error', 'message': str(e)}, status=500)
+    
+def top5Customers(request):
+    result = top5Cust()
+    try:
+        json_data = json.dumps({'status':'success', 'data': result})
+        return JsonResponse(json.loads(json_data))
     except Exception as e:
         return JsonResponse({'status': 'error', 'message': str(e)}, status=500)
