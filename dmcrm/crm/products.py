@@ -1,5 +1,6 @@
 import collections
 import pandas as pd
+import csv
 
 purchase_history_path = r'C:/Users/Akash Reddy/OneDrive/Documents/GitHub/crm/datasets/purchase_history.csv'
 products_path = r'C:/Users/Akash Reddy/OneDrive/Documents/GitHub/crm/datasets/products.csv'
@@ -12,13 +13,7 @@ def products_json():
     # Convert DataFrame to JSON
     json_data = df.to_dict(orient='records')
 
-    # Create the JSON response structure
-    prod_result = {
-        "status": "success",
-        "data": json_data
-    }
-
-    return prod_result
+    return json_data
 
 def products_Top5():
     # Read purchase history CSV file
