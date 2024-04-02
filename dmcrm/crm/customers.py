@@ -48,7 +48,6 @@ def top5Cust():
 
 def customer_information():
     customer_info_df = pd.read_csv(customer_information_path)
-
     customer_info_df.columns = ["customer_id", "customer_name", "email", "phone_number", "address", "age", "gender"]
     
     result_json = customer_info_df.to_dict(orient='records')
@@ -66,4 +65,23 @@ def customer_information():
             "gender": item["gender"]
         })
         
+    total_customers = len(cust_result)
+    cust_result.append({"total_customers": total_customers})
+    
     return cust_result
+
+def cust_count_yearly():
+    customers_by_year = collections.defaultdict(set)
+
+    with open(purchase_history_path, 'r') as file:
+        reader = csv.DictReader(file)
+        for row in reader:
+            year = row['Date of Purchase'].split('-')[2]
+            customer_id = row['Customer ID']
+            customers_by_year[year].add(customer_id)
+
+    customers_count_by_year = {year: len(customers) for year, customers in customers_by_year.items()}
+    
+    result_json = [{'year': year, 'no_of_customers': count} for year, count in customers_count_by_year.items()]
+    
+    return result_json

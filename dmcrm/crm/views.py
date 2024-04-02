@@ -6,7 +6,7 @@ from collections import defaultdict
 from operator import itemgetter
 import pandas as pd
 from .products import products_json,products_Top5, least_Purchased, top_Revenue
-from .customers import top5Cust, customer_information
+from .customers import top5Cust, customer_information, cust_count_yearly
 
 # Load products data
 products_file_path = r'C:/Users/Akash Reddy/OneDrive/Documents/GitHub/crm/datasets/products.csv'
@@ -103,5 +103,31 @@ def top5Customers(request):
     try:
         json_data = json.dumps({'status':'success', 'data': result})
         return JsonResponse(json.loads(json_data))
+    except Exception as e:
+        return JsonResponse({'status': 'error', 'message': str(e)}, status=500)
+    
+def customer_count_yearly(request):
+    result = cust_count_yearly()
+    try:
+        json_data = json.dumps({'status':'success', 'data': result})
+        return JsonResponse(json.loads(json_data))
+    except Exception as e:
+        return JsonResponse({'status': 'error', 'message': str(e)}, status=500)
+    
+def extractList_customers(request, filter_type):
+    try:
+        # Check if the requested attribute is valid
+        valid_attributes = customer_info_data[0].keys()
+        if filter_type not in valid_attributes:
+            return JsonResponse({'status': 'error', 'message': 'Invalid attribute'}, status=400)
+
+        # Extract unique values for the requested attribute
+        unique_values = set(customer[filter_type] for customer in customer_info_data)
+
+        # Convert the set of unique values to a list
+        unique_values_list = list(unique_values)
+
+        return JsonResponse({'status': 'success', 'data': unique_values_list})
+
     except Exception as e:
         return JsonResponse({'status': 'error', 'message': str(e)}, status=500)
