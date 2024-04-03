@@ -1,4 +1,4 @@
-Customer ID,Name,Email,Phone number,Address,Age,Gender
+CustomerID,Name,Email,PhoneNumber,Address,Age,Gender
 1,John Doe,johndoe@example.com,123-456-7890,123 Main St,35,Male
 2,Jane Smith,janesmith@example.com,987-654-3210,456 Oak St,28,Female
 3,Michael Johnson,michaeljohnson@example.com,555-555-5555,789 Elm St,42,Male

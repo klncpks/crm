@@ -1,4 +1,4 @@
-Transaction ID,Employee ID,Customer ID,Date of Purchase,Product ID,Quantity,Region,Branch,Payment Mode,Total amount
+TransactionID,EmployeeID,CustomerID,DateofPurchase,ProductID,Quantity,Region,Branch,PaymentMode,TotalAmount
 1,1002,85,01-01-2018,138,3,Warangal,Hanamkonda,PayPal,59.97
 2,1017,63,02-01-2018,112,2,Vikarabad,Kodangal,Credit Card,79.98
 3,1003,14,03-01-2018,120,4,Karimnagar,Kondagattu,Cash,1599.96

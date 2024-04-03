@@ -11,25 +11,25 @@ def top5Cust():
     customer_info_df = pd.read_csv(customer_information_path)
     
     # Merge datasets to get Customer Name
-    customer_id_to_name = dict(zip(customer_info_df['Customer ID'], customer_info_df['Name']))
-    purchase_history_df = pd.merge(purchase_history_df, customer_info_df[['Customer ID', 'Name']], on='Customer ID')
+    customer_id_to_name = dict(zip(customer_info_df['CustomerID'], customer_info_df['Name']))
+    purchase_history_df = pd.merge(purchase_history_df, customer_info_df[['CustomerID', 'Name']], on='CustomerID')
     
     # Group by Customer ID and count occurrences
-    customer_purchases = purchase_history_df['Customer ID'].value_counts().reset_index()
-    customer_purchases.columns = ['Customer ID', 'no_of_purchases']
+    customer_purchases = purchase_history_df['CustomerID'].value_counts().reset_index()
+    customer_purchases.columns = ['CustomerID', 'no_of_purchases']
     
     # Get top 5 customers by number of purchases
     top_5_customers = customer_purchases.head(5)
     
     # Calculate total revenue for each customer
-    total_revenue = purchase_history_df.groupby('Customer ID')['Total amount'].sum().reset_index()
-    total_revenue.columns = ['Customer ID', 'total_revenue']
+    total_revenue = purchase_history_df.groupby('CustomerID')['TotalAmount'].sum().reset_index()
+    total_revenue.columns = ['CustomerID', 'total_revenue']
     
     # Merge total revenue with top 5 customers
-    top_5_customers = pd.merge(top_5_customers, total_revenue, on='Customer ID')
+    top_5_customers = pd.merge(top_5_customers, total_revenue, on='CustomerID')
     
     # Replace Customer IDs with Customer Names using the dictionary
-    top_5_customers['customer_name'] = top_5_customers['Customer ID'].map(customer_id_to_name)
+    top_5_customers['customer_name'] = top_5_customers['CustomerID'].map(customer_id_to_name)
     
     # Select only required columns
     top_5_customers = top_5_customers[['customer_name', 'no_of_purchases', 'total_revenue']]
@@ -76,8 +76,8 @@ def cust_count_yearly():
     with open(purchase_history_path, 'r') as file:
         reader = csv.DictReader(file)
         for row in reader:
-            year = row['Date of Purchase'].split('-')[2]
-            customer_id = row['Customer ID']
+            year = row['DateofPurchase'].split('-')[2]
+            customer_id = row['CustomerID']
             customers_by_year[year].add(customer_id)
 
     customers_count_by_year = {year: len(customers) for year, customers in customers_by_year.items()}

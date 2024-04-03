@@ -112,4 +112,13 @@ def product_feedback(request, product_id):
             return  JsonResponse(result)
     else:
         return JsonResponse(result, status=404)
+def extractProductIDsAndNames(request):
+    try:
+        # Extract unique product IDs and names
+        unique_products = [{'product_id': product['ProductID'], 'product_name': product['ProductName']} for product in products_data]
+
+        return JsonResponse({'status': 'success', 'data': unique_products})
+    except Exception as e:
+        return JsonResponse({'status': 'error', 'message': str(e)}, status=500)
+
 

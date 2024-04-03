@@ -15,11 +15,12 @@ def load_data(file_path):
 products_data = load_data(products_file_path)
 feedback_data = load_data(feedback_file_path)
 purchases_data = load_data(purchases_file_path)
+
 # Function to get product details by ID
 def productDetails(product_id):
     try:
         # Find the product with the given ID
-        product = next((p for p in products_data if p['Product ID'] == product_id), None)
+        product = next((p for p in products_data if p['ProductID'] == product_id), None)
         if product:
             return {'status': 'success', 'data': product}
         else:
@@ -30,7 +31,7 @@ def productDetails(product_id):
 def allPurchases(product_id):
     try:
         # Filter purchases data to get purchases of the specified product ID
-        product_purchases = [purchase for purchase in purchases_data if purchase['Product ID'] == product_id]
+        product_purchases = [purchase for purchase in purchases_data if purchase['ProductID'] == product_id]
 
         if product_purchases:
             return {'status': 'success', 'data': product_purchases}
@@ -42,10 +43,10 @@ def allPurchases(product_id):
 def feedback(product_id):
     try:
         # Get all transaction IDs for the specified product
-        product_transactions = [purchase['Transaction ID'] for purchase in purchases_data if purchase['Product ID'] == product_id]
+        product_transactions = [purchase['TransactionID'] for purchase in purchases_data if purchase['ProductID'] == product_id]
 
         # Filter feedback data based on the transaction IDs
-        product_feedback = [feedback for feedback in feedback_data if feedback['Transaction ID'] in product_transactions]
+        product_feedback = [feedback for feedback in feedback_data if feedback['TransactionID'] in product_transactions]
 
         if product_feedback:
             return {'status': 'success', 'data': product_feedback}
@@ -53,4 +54,3 @@ def feedback(product_id):
             return {'status': 'error', 'message': 'No feedback found for the product'}
     except Exception as e:
         return {'status': 'error', 'message': str(e)}
-

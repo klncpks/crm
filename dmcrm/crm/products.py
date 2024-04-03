@@ -21,9 +21,9 @@ def products_Top5():
     with open(purchase_history_path, 'r', encoding='utf-8') as purchase_file:
         purchase_reader = csv.DictReader(purchase_file)
         for row in purchase_reader:
-            product_id = row['Product ID']
+            product_id = row['ProductID']
             quantity = int(row['Quantity'])
-            total_amount = float(row['Total amount'])
+            total_amount = float(row['TotalAmount'])
             purchase_data[product_id]['total_quantity'] += quantity
             purchase_data[product_id]['total_revenue'] += total_amount
 
@@ -32,8 +32,8 @@ def products_Top5():
     with open(products_path, 'r', encoding='utf-8') as products_file:
         products_reader = csv.DictReader(products_file)
         for row in products_reader:
-            product_id = row['Product ID']
-            product_name = row['Product Name']
+            product_id = row['ProductID']
+            product_name = row['ProductName']
             products[product_id] = product_name
 
     # Sort products by total quantity sold
@@ -49,10 +49,10 @@ def least_Purchased():
         purchase_history_df = pd.read_csv(purchase_history_path)
 
         # Merge datasets on Product ID
-        merged_df = pd.merge(purchase_history_df, products_df, on="Product ID", how="left")
+        merged_df = pd.merge(purchase_history_df, products_df, on="ProductID", how="left")
 
         # Aggregate sales data to calculate units sold and revenue generated for each product
-        product_sales = merged_df.groupby(['Product ID', 'Product Name', 'Product Cost'])[['Quantity', 'Total amount']].sum().reset_index()
+        product_sales = merged_df.groupby(['ProductID', 'ProductName', 'ProductCost'])[['Quantity', 'TotalAmount']].sum().reset_index()
 
         # Sort products based on units sold
         sorted_products = product_sales.sort_values(by='Quantity', ascending=True).head(5)
@@ -68,9 +68,9 @@ def least_Purchased():
         lsp_result = []
         for item in json_data:
             lsp_result.append({
-                "product_name": item["Product Name"],
+                "product_name": item["ProductName"],
                 "total_sold_units": int(item["Quantity"]),
-                "total_revenue": round(item["Total amount"], 2)
+                "total_revenue": round(item["TotalAmount"], 2)
             })
         return lsp_result
 
@@ -80,13 +80,13 @@ def top_Revenue():
         purchase_history_df = pd.read_csv(purchase_history_path)
 
         # Merge datasets on Product ID
-        merged_df = pd.merge(purchase_history_df, products_df, on="Product ID", how="left")
+        merged_df = pd.merge(purchase_history_df, products_df, on="ProductID", how="left")
 
         # Aggregate sales data to calculate revenue generated for each product
-        product_revenue = merged_df.groupby(['Product ID', 'Product Name', 'Product Cost']).agg({'Quantity': 'sum', 'Total amount': 'sum'}).reset_index()
+        product_revenue = merged_df.groupby(['ProductID', 'ProductName', 'ProductCost']).agg({'Quantity': 'sum', 'TotalAmount': 'sum'}).reset_index()
 
         # Calculate revenue generated per product
-        product_revenue['Revenue Generated'] = product_revenue['Quantity'] * product_revenue['Product Cost']
+        product_revenue['Revenue Generated'] = product_revenue['Quantity'] * product_revenue['ProductCost']
 
         # Sort products based on revenue generated
         top_product = product_revenue.sort_values(by='Revenue Generated', ascending=False).head(1)
@@ -98,7 +98,7 @@ def top_Revenue():
         tpr_result = []
         for item in json_data:
             tpr_result.append({
-                "product_name": item["Product Name"],
+                "product_name": item["ProductName"],
                 "total_sold_units": int(item["Quantity"]),
                 "total_revenue": round(item["Revenue Generated"], 2)
             })
@@ -109,13 +109,13 @@ def least_Revenue():
     purchase_history_df = pd.read_csv(purchase_history_path)
 
         # Merge datasets on Product ID
-    merged_df = pd.merge(purchase_history_df, products_df, on="Product ID", how="left")
+    merged_df = pd.merge(purchase_history_df, products_df, on="ProductID", how="left")
 
     # Aggregate sales data to calculate revenue generated for each product
-    product_revenue = merged_df.groupby(['Product ID', 'Product Name', 'Product Cost']).agg({'Quantity': 'sum', 'Total amount': 'sum'}).reset_index()
+    product_revenue = merged_df.groupby(['ProductID', 'ProductName', 'ProductCost']).agg({'Quantity': 'sum', 'TotalAmount': 'sum'}).reset_index()
 
     # Calculate revenue generated per product
-    product_revenue['Revenue Generated'] = product_revenue['Quantity'] * product_revenue['Product Cost']
+    product_revenue['Revenue Generated'] = product_revenue['Quantity'] * product_revenue['ProductCost']
 
     # Sort products based on revenue generated
     least_product = product_revenue.sort_values(by='Revenue Generated', ascending=True).head(1)
@@ -127,7 +127,7 @@ def least_Revenue():
     ls_result = []
     for item in json_data:
         ls_result.append({
-            "product_name": item["Product Name"],
+            "product_name": item["ProductName"],
             "total_sold_units": int(item["Quantity"]),
             "total_revenue": round(item["Revenue Generated"], 2)
         })
