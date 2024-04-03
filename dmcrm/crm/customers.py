@@ -64,10 +64,7 @@ def customer_information():
             "age": item["age"],
             "gender": item["gender"]
         })
-        
-    total_customers = len(cust_result)
-    cust_result.append({"total_customers": total_customers})
-    
+
     return cust_result
 
 def cust_count_yearly():
