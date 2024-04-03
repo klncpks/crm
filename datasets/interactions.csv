@@ -1,4 +1,4 @@
-Interaction ID,Customer ID,Date of Interaction,Interaction Type,Purpose of Interaction,Outcome of Interaction
+Interaction ID,CustomerID,DateofInteraction,InteractionType,PurposeofInteraction,OutcomeofInteraction
 1,85,04-01-2018,Email,Inquiry,Resolved
 2,41,05-01-2018,Call,Complaint,Escalated
 3,14,06-01-2018,Chat,Feedback,Resolved
