@@ -121,4 +121,10 @@ def extractProductIDsAndNames(request):
     except Exception as e:
         return JsonResponse({'status': 'error', 'message': str(e)}, status=500)
 
-
+def customer_table(request):
+    result = customers_table()
+    try:
+        json_data = json.dumps({'status':'success', 'data': result})
+        return JsonResponse(json.loads(json_data))
+    except Exception as e:
+        return JsonResponse({'status': 'error', 'message': str(e)}, status=500)

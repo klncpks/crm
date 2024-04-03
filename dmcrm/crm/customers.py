@@ -25,6 +25,8 @@ def top5Cust():
     total_revenue = purchase_history_df.groupby('CustomerID')['TotalAmount'].sum().reset_index()
     total_revenue.columns = ['CustomerID', 'total_revenue']
     
+    total_revenue['total_revenue'] = total_revenue['total_revenue'].apply(lambda x: round(x, 2))
+    
     # Merge total revenue with top 5 customers
     top_5_customers = pd.merge(top_5_customers, total_revenue, on='CustomerID')
     
@@ -82,3 +84,15 @@ def cust_count_yearly():
     result_json = [{'year': year, 'no_of_customers': count} for year, count in customers_count_by_year.items()]
     
     return result_json
+
+def customers_table():
+    purchase_df = pd.read_csv(purchase_history_path)
+    customer_df = pd.read_csv(customer_information_path)
+    customer_stats = purchase_df.groupby('CustomerID').agg(
+        no_of_visits=('TransactionID', 'count'),
+        total_revenue=('TotalAmount', lambda x: round(x.sum(), 2))  
+    ).reset_index()
+    customer_stats['customer_name'] = customer_stats['CustomerID'].apply(lambda x: customer_df[customer_df['Customer ID'] == x]['Name'].values[0] if len(customer_df[customer_df['Customer ID'] == x]['Name'].values) > 0 else None)
+    customer_stats.rename(columns={'CustomerID': 'customer_id'}, inplace=True)
+    json_response = customer_stats[['customer_id', 'customer_name', 'no_of_visits', 'total_revenue']].to_dict(orient='records')
+    return json_response
