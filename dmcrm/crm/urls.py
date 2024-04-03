@@ -15,6 +15,10 @@ urlpatterns = [
     path('customers/',views.customers),
     path('customers/top5/',views.top5Cust),
     path('customers/count',views.customer_count_yearly),
-    path('customers/<str:filter_type>/', views.extractList_customers)
+    path('customers/<str:filter_type>/', views.extractList_customers),
+    path('product/<str:product_id>/', views.productDetails),
+    path('product/purchases/<str:product_id>/',views.product_purchases),
+    path('product/feedback/<str:product_id>/',views.product_feedback),
+
 ]
 

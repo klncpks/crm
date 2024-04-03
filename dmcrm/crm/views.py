@@ -1,77 +1,55 @@
 import csv
 import json
-from django.shortcuts import render
-from django.http import HttpResponse, JsonResponse
-from collections import defaultdict
-from operator import itemgetter
-import pandas as pd
-from .products import products_json,products_Top5, least_Purchased, top_Revenue
+from django.http import JsonResponse
+from .products import products_json, products_Top5, least_Purchased, top_Revenue
 from .customers import top5Cust, customer_information, cust_count_yearly
+from .product import productDetails,allPurchases,feedback
 
-# Load products data
+# Define file paths
 products_file_path = r'C:/Users/Akash Reddy/OneDrive/Documents/GitHub/crm/datasets/products.csv'
-with open(products_file_path, 'r', encoding='utf-8') as products_file:
-    products_data = list(csv.DictReader(products_file))
-
-# Load purchase history data
 purchase_history_file_path = r'C:/Users/Akash Reddy/OneDrive/Documents/GitHub/crm/datasets/purchase_history.csv'
-with open(purchase_history_file_path, 'r', encoding='utf-8') as purchase_history_file:
-    purchase_history_data = list(csv.DictReader(purchase_history_file))
-
-# Load customer information data
 customer_info_file_path = r'C:/Users/Akash Reddy/OneDrive/Documents/GitHub/crm/datasets/customer_information.csv'
-with open(customer_info_file_path, 'r', encoding='utf-8') as customer_info_file:
-    customer_info_data = list(csv.DictReader(customer_info_file))
 
-def home(request):
+# Function to load data from a CSV file
+def load_data(file_path):
+    with open(file_path, 'r', encoding='utf-8') as file:
+        return list(csv.DictReader(file))
+
+# Load data
+products_data = load_data(products_file_path)
+purchase_history_data = load_data(purchase_history_file_path)
+customer_info_data = load_data(customer_info_file_path)
+
+# Function to handle JsonResponse and error handling
+def handle_request(request, data_func):
     try:
-        json_data = json.dumps({'status': 'success', 'data': customer_info_data})
+        result = data_func()
+        json_data = json.dumps({'status': 'success', 'data': result})
         return JsonResponse(json.loads(json_data))
     except FileNotFoundError:
         return JsonResponse({'status': 'error', 'message': 'File not found'}, status=404)
     except Exception as e:
         return JsonResponse({'status': 'error', 'message': str(e)}, status=500)
 
+# Define views
+def home(request):
+    return handle_request(request, lambda: customer_info_data)
+
 def products(request):
-    result = products_json()
-    try:
-        json_data = json.dumps({'status':'success', 'data': result})
-        return JsonResponse(json.loads(json_data))
-    except Exception as e:
-        return JsonResponse({'status': 'error', 'message': str(e)}, status=500)
-    
+    return handle_request(request, products_json)
+
 def productsTop5(request):
-    result = products_Top5()
-    try:
-        json_data = json.dumps({'status':'success', 'data': result})
-        return JsonResponse(json.loads(json_data))
-    except Exception as e:
-        return JsonResponse({'status': 'error', 'message': str(e)}, status=500)
+    return handle_request(request, products_Top5)
 
 def leastPurchased(request):
-    result = least_Purchased()
-    try:
-        json_data = json.dumps({'status':'success', 'data': result})
-        return JsonResponse(json.loads(json_data))
-    except Exception as e:
-        return JsonResponse({'status': 'error', 'message': str(e)}, status=500)
+    return handle_request(request, least_Purchased)
 
 def topRevenue(request):
-    result = top_Revenue()
-    try:
-        json_data = json.dumps({'status':'success', 'data': result})
-        return JsonResponse(json.loads(json_data))
-    except Exception as e:
-        return JsonResponse({'status': 'error', 'message': str(e)}, status=500)
-    
+    return handle_request(request, top_Revenue)
+
 def leastRevenue(request):
-    result = least_Purchased()
-    try:
-        json_data = json.dumps({'status':'success', 'data': result})
-        return JsonResponse(json.loads(json_data))
-    except Exception as e:
-        return JsonResponse({'status': 'error', 'message': str(e)}, status=500)
-    
+    return handle_request(request, least_Purchased)
+
 def extractList(request, filter_type):
     try:
         # Check if the requested attribute is valid
@@ -89,31 +67,16 @@ def extractList(request, filter_type):
 
     except Exception as e:
         return JsonResponse({'status': 'error', 'message': str(e)}, status=500)
-    
+
 def customers(request):
-    result = customer_information()
-    try:
-        json_data = json.dumps({'status':'success', 'data': result})
-        return JsonResponse(json.loads(json_data))
-    except Exception as e:
-        return JsonResponse({'status': 'error', 'message': str(e)}, status=500)
-    
+    return handle_request(request, customer_information)
+
 def top5Customers(request):
-    result = top5Cust()
-    try:
-        json_data = json.dumps({'status':'success', 'data': result})
-        return JsonResponse(json.loads(json_data))
-    except Exception as e:
-        return JsonResponse({'status': 'error', 'message': str(e)}, status=500)
-    
+    return handle_request(request, top5Cust)
+
 def customer_count_yearly(request):
-    result = cust_count_yearly()
-    try:
-        json_data = json.dumps({'status':'success', 'data': result})
-        return JsonResponse(json.loads(json_data))
-    except Exception as e:
-        return JsonResponse({'status': 'error', 'message': str(e)}, status=500)
-    
+    return handle_request(request, cust_count_yearly)
+
 def extractList_customers(request, filter_type):
     try:
         # Check if the requested attribute is valid
@@ -131,3 +94,22 @@ def extractList_customers(request, filter_type):
 
     except Exception as e:
         return JsonResponse({'status': 'error', 'message': str(e)}, status=500)
+def product_details(request, product_id):
+    result = productDetails(product_id)
+    if result['status'] == 'success':
+        return JsonResponse(result)
+    else:
+        return JsonResponse(result, status=404)
+def product_purchases(request, product_id):
+    result = allPurchases(product_id)
+    if result['status'] == 'success':
+            return  JsonResponse(result)
+    else:
+        return JsonResponse(result, status=404)
+def product_feedback(request, product_id):
+    result = feedback(product_id)
+    if result['status'] == 'success':
+            return  JsonResponse(result)
+    else:
+        return JsonResponse(result, status=404)
+
