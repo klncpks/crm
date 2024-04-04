@@ -11,8 +11,8 @@ def top5Cust():
     customer_info_df = pd.read_csv(customer_information_path)
     
     # Merge datasets to get Customer Name
-    customer_id_to_name = dict(zip(customer_info_df['Customer ID'], customer_info_df['Name']))
-    purchase_history_df = pd.merge(purchase_history_df, customer_info_df, left_on='CustomerID', right_on='Customer ID')
+    customer_id_to_name = dict(zip(customer_info_df['CustomerID'], customer_info_df['Name']))
+    purchase_history_df = pd.merge(purchase_history_df, customer_info_df, left_on='CustomerID', right_on='CustomerID')
     
     # Group by Customer ID and count occurrences
     customer_purchases = purchase_history_df['CustomerID'].value_counts().reset_index()
@@ -92,7 +92,7 @@ def customers_table():
         no_of_visits=('TransactionID', 'count'),
         total_revenue=('TotalAmount', lambda x: round(x.sum(), 2))  
     ).reset_index()
-    customer_stats['customer_name'] = customer_stats['CustomerID'].apply(lambda x: customer_df[customer_df['Customer ID'] == x]['Name'].values[0] if len(customer_df[customer_df['Customer ID'] == x]['Name'].values) > 0 else None)
+    customer_stats['customer_name'] = customer_stats['CustomerID'].apply(lambda x: customer_df[customer_df['CustomerID'] == x]['Name'].values[0] if len(customer_df[customer_df['CustomerID'] == x]['Name'].values) > 0 else None)
     customer_stats.rename(columns={'CustomerID': 'customer_id'}, inplace=True)
     json_response = customer_stats[['customer_id', 'customer_name', 'no_of_visits', 'total_revenue']].to_dict(orient='records')
     return json_response

@@ -14,7 +14,7 @@ urlpatterns = [
     path('products/<str:filter_type>/', views.extractList),
     path('customers/',views.customers),
     path('customers/top5/',views.top5Customers),
-    path('customers/count',views.customer_count_yearly),
+    path('customers/count/',views.customer_count_yearly),
     path('product/<str:product_id>/', views.product_details),
     path('product/purchases/<str:product_id>/',views.product_purchases),
     path('product/feedback/<str:product_id>/',views.product_feedback),
