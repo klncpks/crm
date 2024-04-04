@@ -11,8 +11,8 @@ def top5Cust():
     customer_info_df = pd.read_csv(customer_information_path)
     
     # Merge datasets to get Customer Name
-    customer_id_to_name = dict(zip(customer_info_df['CustomerID'], customer_info_df['Name']))
-    purchase_history_df = pd.merge(purchase_history_df, customer_info_df[['CustomerID', 'Name']], on='CustomerID')
+    customer_id_to_name = dict(zip(customer_info_df['Customer ID'], customer_info_df['Name']))
+    purchase_history_df = pd.merge(purchase_history_df, customer_info_df, left_on='CustomerID', right_on='Customer ID')
     
     # Group by Customer ID and count occurrences
     customer_purchases = purchase_history_df['CustomerID'].value_counts().reset_index()
@@ -24,7 +24,8 @@ def top5Cust():
     # Calculate total revenue for each customer
     total_revenue = purchase_history_df.groupby('CustomerID')['TotalAmount'].sum().reset_index()
     total_revenue.columns = ['CustomerID', 'total_revenue']
-    
+
+    # Round the total revenue
     total_revenue['total_revenue'] = total_revenue['total_revenue'].apply(lambda x: round(x, 2))
     
     # Merge total revenue with top 5 customers
@@ -66,7 +67,6 @@ def customer_information():
             "age": item["age"],
             "gender": item["gender"]
         })
-
     return cust_result
 
 def cust_count_yearly():
