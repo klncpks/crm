@@ -2,11 +2,7 @@ import csv
 import json
 from django.http import JsonResponse
 from .products import products_json, products_Top5, least_Purchased, top_Revenue
-<<<<<<< HEAD
-from .customers import top5Cust, customer_information, cust_count_yearly,customers_table
-=======
 from .customers import top5Cust, customer_information, cust_count_yearly, customers_table
->>>>>>> 47c1bc12696ce786f8ef886754296cec39847772
 from .product import productDetails,allPurchases,feedback
 
 # Define file paths
