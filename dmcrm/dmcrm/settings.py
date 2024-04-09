@@ -15,8 +15,9 @@ import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
-
-
+PRODUCTS_FILE_PATH = os.path.join(BASE_DIR, 'crm', 'datasets', 'products.csv')
+FEEDBACK_FILE_PATH = os.path.join(BASE_DIR, 'crm', 'datasets', 'feedback.csv')
+PURCHASES_FILE_PATH = os.path.join(BASE_DIR, 'crm', 'datasets', 'purchase_history.csv')
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.0/howto/deployment/checklist/
 
@@ -46,10 +47,11 @@ MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
     "django.middleware.common.CommonMiddleware",
-    "django.middleware.csrf.CsrfViewMiddleware",
     "django.contrib.auth.middleware.AuthenticationMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
+    
+    
 ]
 
 ROOT_URLCONF = "dmcrm.urls"
@@ -98,7 +100,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",  # Add the URL of your React app here
-    # Add more origins if needed
+    "https://postman.com",
 ]
 
 CORS_ALLOW_METHODS = [
@@ -110,9 +112,10 @@ CORS_ALLOW_METHODS = [
     'OPTIONS'
 ]
 
+# CORS settings
+CORS_ALLOW_CREDENTIALS = True
+CSRF_USE_SESSIONS = True
 
-# Internationalization
-# https://docs.djangoproject.com/en/5.0/topics/i18n/
 
 LANGUAGE_CODE = "en-us"
 
@@ -128,12 +131,10 @@ USE_TZ = True
 
 STATIC_URL = "static/"
 
-# Default primary key field type
-# https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
+# Define the directory where your CSV files are located
+CSV_FILES_DIR = os.path.join(BASE_DIR, 'datasets')
 
-DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
-#Ensure that you have MEDIA_ROOT and MEDIA_URL configured properly in your settings. 
-# These settings specify the directory where uploaded files will be stored (MEDIA_ROOT) and the URL prefix to serve the media files (MEDIA_URL).
-MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+# Update the MEDIA_ROOT and STATIC_ROOT settings to point to the CSV files directory
+MEDIA_ROOT = os.path.join(CSV_FILES_DIR, 'media')
+STATIC_ROOT = os.path.join(CSV_FILES_DIR, 'static')

@@ -2,13 +2,15 @@ import csv
 import json
 from django.http import JsonResponse
 from .products import products_json, products_Top5, least_Purchased, top_Revenue
-from .customers import top5Cust, customer_information, cust_count_yearly, customers_table
-from .product import productDetails,allPurchases,feedback
+from .customers import top5Cust, customer_information, cust_count_yearly, customers_table, add_new_customer
+from .product import productDetails, allPurchases, feedback
+import os
 
 # Define file paths
-products_file_path = r'C:/Users/Akash Reddy/OneDrive/Documents/GitHub/crm/datasets/products.csv'
-purchase_history_file_path = r'C:/Users/Akash Reddy/OneDrive/Documents/GitHub/crm/datasets/purchase_history.csv'
-customer_info_file_path = r'C:/Users/Akash Reddy/OneDrive/Documents/GitHub/crm/datasets/customer_information.csv'
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+products_file_path = os.path.join(BASE_DIR, 'datasets', 'products.csv')
+purchase_history_file_path = os.path.join(BASE_DIR, 'datasets', 'purchase_history.csv')
+customer_info_file_path = os.path.join(BASE_DIR, 'datasets', 'customer_information.csv')
 
 # Function to load data from a CSV file
 def load_data(file_path):
@@ -31,7 +33,6 @@ def handle_request(request, data_func):
     except Exception as e:
         return JsonResponse({'status': 'error', 'message': str(e)}, status=500)
 
-# Define views
 def home(request):
     return handle_request(request, lambda: customer_info_data)
 
@@ -128,3 +129,14 @@ def customer_table(request):
         return JsonResponse(json.loads(json_data))
     except Exception as e:
         return JsonResponse({'status': 'error', 'message': str(e)}, status=500)
+
+def add_customer(request):
+    if request.method == 'POST':
+        try:
+            result = add_new_customer(request.POST)
+            json_data = json.dumps({'status':'success', 'data': result})
+            return JsonResponse(json.loads(json_data))
+        except Exception as e:
+            return JsonResponse({'status': 'error', 'message': str(e)}, status=500)
+    else:
+        return JsonResponse({'status': 'error', 'message': 'Invalid request method'}, status=400)

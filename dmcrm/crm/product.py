@@ -1,10 +1,10 @@
 import csv
 from django.http import JsonResponse
 
-# Define file path for products data
-products_file_path = r'C:/Users/Akash Reddy/OneDrive/Documents/GitHub/crm/datasets/products.csv'
-feedback_file_path = r'C:/Users/Akash Reddy/OneDrive/Documents/GitHub/crm/datasets/feedback.csv'
-purchases_file_path = r'C:/Users/Akash Reddy/OneDrive/Documents/GitHub/crm/datasets/purchase_history.csv'
+products_file_path = r'C:\Users\Akash Reddy\OneDrive\Documents\GitHub\crm\dmcrm\datasets\products.csv'
+feedback_file_path = r'C:\Users\Akash Reddy\OneDrive\Documents\GitHub\crm\dmcrm\datasets\feedback.csv'
+purchases_file_path = r'C:\Users\Akash Reddy\OneDrive\Documents\GitHub\crm\dmcrm\datasets\purchase_history.csv'
+
 
 # Function to load data from a CSV file
 def load_data(file_path):

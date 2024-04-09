@@ -2,8 +2,8 @@ import collections
 import csv
 import pandas as pd
 
-purchase_history_path = r'C:/Users/Akash Reddy/OneDrive/Documents/GitHub/crm/datasets/purchase_history.csv'
-customer_information_path = r'C:/Users/Akash Reddy/OneDrive/Documents/GitHub/crm/datasets/customer_information.csv'
+purchase_history_path = r'C:/Users/Akash Reddy/OneDrive/Documents/GitHub/crm/dmcrm/datasets/purchase_history.csv'
+customer_information_path = r'C:/Users/Akash Reddy/OneDrive/Documents/GitHub/crm/dmcrm/datasets/customer_information.csv'
 
 def top5Cust():
     # Read the purchase history and customer information datasets
@@ -96,3 +96,23 @@ def customers_table():
     customer_stats.rename(columns={'CustomerID': 'customer_id'}, inplace=True)
     json_response = customer_stats[['customer_id', 'customer_name', 'no_of_visits', 'total_revenue']].to_dict(orient='records')
     return json_response
+
+def add_new_customer(data):
+    try:
+        # Open the CSV file in append mode
+        with open(customer_information_path, 'a', newline='', encoding='utf-8') as file:
+            writer = csv.DictWriter(file, fieldnames=["CustomerID", "Name", "Email", "PhoneNumber", "Address", "Age", "Gender"])
+            # Write the new customer data to the CSV file
+            writer.writerow({
+                "CustomerID": data.get("CustomerID", ""), 
+                "Name": data.get("Name", ""), 
+                "Email": data.get("Email", ""), 
+                "PhoneNumber": data.get("PhoneNumber", ""), 
+                "Address": data.get("Address", ""), 
+                "Age": data.get("Age", ""), 
+                "Gender": data.get("Gender", "")
+            })
+            return data.get("CustomerID", "")
+    except Exception as e:
+        # Handle any exceptions that may occur during the file operation
+        raise e

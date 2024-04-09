@@ -20,5 +20,6 @@ urlpatterns = [
     path('product/feedback/<str:product_id>/',views.product_feedback),
     path('product/id/name/',views.extractProductIDsAndNames),
     path('customers/table/',views.customer_table),
+    path('customers/add/', views.add_customer),
 ]
 
