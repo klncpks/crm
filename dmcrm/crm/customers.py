@@ -1,6 +1,33 @@
 import collections
 import csv
 import pandas as pd
+import random
+import string
+
+import csv
+
+def generate_customer_id():
+    try:
+        # Open the CSV file in read mode to find the maximum customer ID
+        with open(customer_information_path, 'r', newline='', encoding='utf-8') as file:
+            reader = csv.DictReader(file)
+            # Extract all existing customer IDs
+            existing_ids = [int(row['CustomerID']) for row in reader]
+            # Find the maximum customer ID
+            max_id = max(existing_ids)
+            # Generate the next customer ID by incrementing the maximum ID
+            next_id = max_id + 1
+            return str(next_id).zfill(6)  # Format the ID to have leading zeros if necessary
+    except FileNotFoundError:
+        # Handle file not found error
+        print("File not found:", customer_information_path)
+    except Exception as e:
+        # Handle any other exceptions
+        print("Error:", e)
+
+# Example usage
+next_customer_id = generate_customer_id()
+print("Next customer ID:", next_customer_id)
 
 purchase_history_path = r'C:/Users/Akash Reddy/OneDrive/Documents/GitHub/crm/dmcrm/datasets/purchase_history.csv'
 customer_information_path = r'C:/Users/Akash Reddy/OneDrive/Documents/GitHub/crm/dmcrm/datasets/customer_information.csv'
@@ -103,8 +130,9 @@ def add_new_customer(data):
         with open(customer_information_path, 'a', newline='', encoding='utf-8') as file:
             writer = csv.DictWriter(file, fieldnames=["CustomerID", "Name", "Email", "PhoneNumber", "Address", "Age", "Gender"])
             # Write the new customer data to the CSV file
+            customer_id = generate_customer_id()  # This function generates or retrieves the CustomerID
             writer.writerow({
-                "CustomerID": data.get("CustomerID", ""), 
+                "CustomerID": customer_id, 
                 "Name": data.get("Name", ""), 
                 "Email": data.get("Email", ""), 
                 "PhoneNumber": data.get("PhoneNumber", ""), 
@@ -112,7 +140,7 @@ def add_new_customer(data):
                 "Age": data.get("Age", ""), 
                 "Gender": data.get("Gender", "")
             })
-            return data.get("CustomerID", "")
+            return customer_id  # Return the generated CustomerID
     except Exception as e:
         # Handle any exceptions that may occur during the file operation
         raise e

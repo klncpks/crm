@@ -6,6 +6,24 @@ import os
 products_path = r'C:\Users\Akash Reddy\OneDrive\Documents\GitHub\crm\dmcrm\datasets\products.csv'
 purchase_history_path = r'C:\Users\Akash Reddy\OneDrive\Documents\GitHub\crm\dmcrm\datasets\purchase_history.csv'
 
+def generate_product_id():
+    try:
+        # Open the CSV file in read mode to find the maximum product ID
+        with open(products_path, 'r', newline='', encoding='utf-8') as file:
+            reader = csv.DictReader(file)
+            # Extract all existing product IDs
+            existing_ids = [int(row['ProductID']) for row in reader]
+            # Find the maximum product ID
+            max_id = max(existing_ids)
+            # Generate the next product ID by incrementing the maximum ID
+            next_id = max_id + 1
+            return str(next_id).zfill(3)  # Format the ID to have leading zeros if necessary
+    except FileNotFoundError:
+        # Handle file not found error
+        print("File not found:", products_path)
+    except Exception as e:
+        # Handle any other exceptions
+        print("Error:", e)
 
 def products_json():
     # Read the CSV file and specify column names
@@ -134,3 +152,19 @@ def least_Revenue():
             "total_revenue": round(item["Revenue Generated"], 2)
         })
     return ls_result
+
+def add_new_product(data):
+    print(data)
+    try:
+        with open(products_path, 'a', newline='', encoding='utf-8') as file:
+            writer = csv.DictWriter(file, fieldnames=["ProductID", "ProductName", "ProductCost", "ProductCategory"])
+            product_id = generate_product_id()  # This function generates or retrieves the ProductID
+            writer.writerow({
+                "ProductID": product_id, 
+                "ProductName": data.get("ProductName", ""), 
+                "ProductCost": data.get("ProductCost", ""),
+                "ProductCategory": data.get("ProductCategory", "")
+            })
+            return product_id
+    except Exception as e:
+        raise e

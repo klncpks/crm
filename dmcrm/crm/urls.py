@@ -12,6 +12,7 @@ urlpatterns = [
     path('products/topRevenue/',views.topRevenue), 
     path('products/leastRevenue/',views.leastRevenue),
     path('products/<str:filter_type>/', views.extractList),
+    path('products/add/',views.add_product),
     path('customers/',views.customers),
     path('customers/top5/',views.top5Customers),
     path('customers/count/',views.customer_count_yearly),
@@ -21,5 +22,7 @@ urlpatterns = [
     path('product/id/name/',views.extractProductIDsAndNames),
     path('customers/table/',views.customer_table),
     path('customers/add/', views.add_customer),
+    path('purchases/add/',views.add_transaction),
+    path('interactions/add/',views.add_interaction),
 ]
 

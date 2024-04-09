@@ -349,3 +349,4 @@ TransactionID,EmployeeID,CustomerID,DateofPurchase,ProductID,Quantity,Region,Bra
 348,1004,13,08-12-2021,144,1,Karimnagar,Kondagattu,Cash,9.99
 349,1001,2,09-12-2021,106,3,Vikarabad,Kodangal,Debit Card,239.97
 350,1017,90,10-12-2021,121,1,Warangal,Hanamkonda,Cash,19.99
+,,,,,,,,,

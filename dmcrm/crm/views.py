@@ -1,9 +1,11 @@
 import csv
 import json
 from django.http import JsonResponse
-from .products import products_json, products_Top5, least_Purchased, top_Revenue
+from .products import products_json, products_Top5, least_Purchased, top_Revenue, add_new_product
 from .customers import top5Cust, customer_information, cust_count_yearly, customers_table, add_new_customer
 from .product import productDetails, allPurchases, feedback
+from .transaction import add_new_transaction
+from .interactions import add_new_interaction
 import os
 
 # Define file paths
@@ -11,6 +13,26 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 products_file_path = os.path.join(BASE_DIR, 'datasets', 'products.csv')
 purchase_history_file_path = os.path.join(BASE_DIR, 'datasets', 'purchase_history.csv')
 customer_info_file_path = os.path.join(BASE_DIR, 'datasets', 'customer_information.csv')
+
+
+def generate_transaction_id():
+    try:
+        # Open the CSV file in read mode to find the maximum transaction ID
+        with open(purchase_history_file_path, 'r', newline='', encoding='utf-8') as file:
+            reader = csv.DictReader(file)
+            # Extract all existing transaction IDs
+            existing_ids = [int(row['TransactionID']) for row in reader]
+            # Find the maximum transaction ID
+            max_id = max(existing_ids)
+            # Generate the next transaction ID by incrementing the maximum ID
+            next_id = max_id + 1
+            return str(next_id).zfill(6)  # Format the ID to have leading zeros if necessary
+    except FileNotFoundError:
+        # Handle file not found error
+        print("File not found:", purchase_history_path)
+    except Exception as e:
+        # Handle any other exceptions
+        print("Error:", e)
 
 # Function to load data from a CSV file
 def load_data(file_path):
@@ -133,8 +155,45 @@ def customer_table(request):
 def add_customer(request):
     if request.method == 'POST':
         try:
-            result = add_new_customer(request.POST)
-            json_data = json.dumps({'status':'success', 'data': result})
+            data = json.loads(request.body.decode('utf-8'))  # Parse JSON data from request body
+            customer_id = add_new_customer(data)
+            json_data = json.dumps({'status': 'success', 'data': {'CustomerID': customer_id}})
+            print(json_data)
+            return JsonResponse(json.loads(json_data))
+        except Exception as e:
+            return JsonResponse({'status': 'error', 'message': str(e)}, status=500)
+    else:
+        return JsonResponse({'status': 'error', 'message': 'Invalid request method'}, status=400)
+
+def add_product(request):
+    if request.method == 'POST':
+        try:
+            data = json.loads(request.body.decode('utf-8'))  # Parse JSON data from request body
+            product_id = add_new_product(data)
+            json_data = json.dumps({'status': 'success', 'data': {'ProductID': product_id}})
+            return JsonResponse(json.loads(json_data))
+        except Exception as e:
+            return JsonResponse({'status': 'error', 'message': str(e)}, status=500)
+    else:
+        return JsonResponse({'status': 'error', 'message': 'Invalid request method'}, status=400)
+            
+def add_transaction(request):
+    if request.method == 'POST':
+        try:
+            data = json.loads(request.body.decode('utf-8'))  # Parse JSON data from request body
+            transaction_id = add_new_transaction(data)
+            json_data = json.dumps({'status': 'success', 'data': {'TransactionID': transaction_id}})
+            return JsonResponse(json.loads(json_data))
+        except Exception as e:
+            return JsonResponse({'status': 'error', 'message': str(e)}, status=500)
+    else:
+        return JsonResponse({'status': 'error', 'message': 'Invalid request method'}, status=400)
+def add_interaction(request):
+    if request.method == 'POST':
+        try:
+            data = json.loads(request.body.decode('utf-8'))  # Parse JSON data from request body
+            interaction_id = add_new_interaction(data)
+            json_data = json.dumps({'status': 'success', 'data': {'InteractionID': interaction_id}})
             return JsonResponse(json.loads(json_data))
         except Exception as e:
             return JsonResponse({'status': 'error', 'message': str(e)}, status=500)
