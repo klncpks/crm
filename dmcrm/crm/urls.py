@@ -24,5 +24,9 @@ urlpatterns = [
     path('customers/add/', views.add_customer),
     path('purchases/add/',views.add_transaction),
     path('interactions/add/',views.add_interaction),
+    path('customer/<str:customer_id>/',views.customer_details),
+    path('customer/transactions/<str:customer_id>/',views.customer_transactions),
+    path('customer/feedback/<str:customer_id>/',views.customer_feedback),
+    path('customer/interactions/<str:customer_id>/',views.customer_interactions),
 ]
 

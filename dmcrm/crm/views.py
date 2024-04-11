@@ -6,6 +6,7 @@ from .customers import top5Cust, customer_information, cust_count_yearly, custom
 from .product import productDetails, allPurchases, feedback
 from .transaction import add_new_transaction
 from .interactions import add_new_interaction
+from .customer import customerDetails, get_customer_interactions, get_customer_transactions, get_customer_feedback
 import os
 
 # Define file paths
@@ -29,7 +30,7 @@ def generate_transaction_id():
             return str(next_id).zfill(6)  # Format the ID to have leading zeros if necessary
     except FileNotFoundError:
         # Handle file not found error
-        print("File not found:", purchase_history_path)
+        print("File not found:", purchase_history_file_path)
     except Exception as e:
         # Handle any other exceptions
         print("Error:", e)
@@ -199,3 +200,31 @@ def add_interaction(request):
             return JsonResponse({'status': 'error', 'message': str(e)}, status=500)
     else:
         return JsonResponse({'status': 'error', 'message': 'Invalid request method'}, status=400)
+    
+def customer_details(request, customer_id):
+    result = customerDetails(customer_id)
+    if result['status'] == 'success':
+        return JsonResponse(result)
+    else:
+        return JsonResponse(result, status=404)
+    
+def customer_transactions(request, customer_id):
+    result = get_customer_transactions(customer_id)
+    if result.status_code == 200:  # Check the status code of the response
+        return result
+    else:
+        return result  # Return the response with the appropriate status code
+
+def customer_feedback(request, customer_id):
+    result = get_customer_feedback(customer_id)
+    if result.status_code == 200:  # Check the status code of the response
+        return result
+    else:
+        return result  # Return the response with the appropriate status code
+
+def customer_interactions(request, customer_id):
+    result = get_customer_interactions(customer_id)
+    if result.status_code == 200:  # Check the status code of the response
+        return result
+    else:
+        return result 
