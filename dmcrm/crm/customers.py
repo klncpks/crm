@@ -102,9 +102,13 @@ def cust_count_yearly():
     with open(purchase_history_path, 'r') as file:
         reader = csv.DictReader(file)
         for row in reader:
-            year = row['DateofPurchase'].split('-')[2]
-            customer_id = row['CustomerID']
-            customers_by_year[year].add(customer_id)
+            date_of_purchase = row.get('DateofPurchase', '')  # Get the value of DateofPurchase, or an empty string if it's missing
+            if date_of_purchase:
+                date_parts = date_of_purchase.split('-')
+                if len(date_parts) == 3:  # Check if the date string has the expected format (YYYY-MM-DD)
+                    year = date_parts[2]
+                    customer_id = row['CustomerID']
+                    customers_by_year[year].add(customer_id)
 
     customers_count_by_year = {year: len(customers) for year, customers in customers_by_year.items()}
     

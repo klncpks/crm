@@ -42,8 +42,8 @@ def products_Top5():
         purchase_reader = csv.DictReader(purchase_file)
         for row in purchase_reader:
             product_id = row['ProductID']
-            quantity = int(row['Quantity'])
-            total_amount = float(row['TotalAmount'])
+            quantity = int(row['Quantity']) if row['Quantity'] else 0
+            total_amount = float(row['TotalAmount']) if row['TotalAmount'] else 0.0  # Check if TotalAmount is empty
             purchase_data[product_id]['total_quantity'] += quantity
             purchase_data[product_id]['total_revenue'] += total_amount
 
@@ -61,7 +61,6 @@ def products_Top5():
 
     # Format data for JSON response with rounded total revenue
     top5_data = [{'product_name': products[product_id], 'total_sold_units': data['total_quantity'], 'total_revenue': round(data['total_revenue'], 2)} for product_id, data in top5_products]
-
     return top5_data
 
 def least_Purchased():

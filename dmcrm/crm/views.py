@@ -3,6 +3,7 @@ import json
 from django.http import JsonResponse
 from .products import products_json, products_Top5, least_Purchased, top_Revenue, add_new_product
 from .customers import top5Cust, customer_information, cust_count_yearly, customers_table, add_new_customer
+from .customer import customerDetails, get_customer_interactions, get_customer_transactions, get_customer_feedback
 from .product import productDetails, allPurchases, feedback
 from .transaction import add_new_transaction
 from .interactions import add_new_interaction
@@ -217,3 +218,30 @@ def extract_branch_regions(request):
             region_branches[region].add(branch)  # Add the branch to the set of branches under the region
 
     return JsonResponse({'status':'success'})
+def customer_details(request, customer_id):
+    result = customerDetails(customer_id)
+    if result['status'] == 'success':
+        return JsonResponse(result)
+    else:
+        return JsonResponse(result, status=404)
+    
+def customer_transactions(request, customer_id):
+    result = get_customer_transactions(customer_id)
+    if result.status_code == 200:  # Check the status code of the response
+        return result
+    else:
+        return result  # Return the response with the appropriate status code
+
+def customer_feedback(request, customer_id):
+    result = get_customer_feedback(customer_id)
+    if result.status_code == 200:  # Check the status code of the response
+        return result
+    else:
+        return result  # Return the response with the appropriate status code
+
+def customer_interactions(request, customer_id):
+    result = get_customer_interactions(customer_id)
+    if result.status_code == 200:  # Check the status code of the response
+        return result
+    else:
+        return result 
