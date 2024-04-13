@@ -357,3 +357,5 @@ TransactionID,EmployeeID,CustomerID,DateofPurchase,ProductID,Quantity,Region,Bra
 ,,,,,,,,,
 ,,,,,,,,,
 ,,,,,,,,,
+351,1005,25,08-01-2018,122,2,Hyderabad,Secunderabad,Credit Card,199.98
+352,101,104,28/10/2024,101,4,Vikarabad,Kodangal,PayPal,2000
