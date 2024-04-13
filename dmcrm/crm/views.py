@@ -6,7 +6,6 @@ from .customers import top5Cust, customer_information, cust_count_yearly, custom
 from .product import productDetails, allPurchases, feedback
 from .transaction import add_new_transaction
 from .interactions import add_new_interaction
-from .customer import customerDetails, get_customer_interactions, get_customer_transactions, get_customer_feedback
 import os
 
 # Define file paths
@@ -200,9 +199,6 @@ def add_interaction(request):
             return JsonResponse({'status': 'error', 'message': str(e)}, status=500)
     else:
         return JsonResponse({'status': 'error', 'message': 'Invalid request method'}, status=400)
-<<<<<<< Updated upstream
-=======
-<<<<<<< HEAD
 def extract_branch_regions(request):
     # Define the path to the purchase history CSV file
     purchase_history_path = r'C:\Users\Akash Reddy\OneDrive\Documents\GitHub\crm\dmcrm\datasets\purchase_history.csv'
@@ -220,46 +216,4 @@ def extract_branch_regions(request):
                 region_branches[region] = set()  # Create a new set for branches under the region
             region_branches[region].add(branch)  # Add the branch to the set of branches under the region
 
-    # Print unique region values and their respective branches
-    for region, branches in region_branches.items():
-        print(f"Region: {region}")
-        print("Branches:")
-        for branch in branches:
-            print(f"  - {branch}")
-        print()
     return JsonResponse({'status':'success'})
-=======
->>>>>>> Stashed changes
-    
-def customer_details(request, customer_id):
-    result = customerDetails(customer_id)
-    if result['status'] == 'success':
-        return JsonResponse(result)
-    else:
-        return JsonResponse(result, status=404)
-    
-def customer_transactions(request, customer_id):
-    result = get_customer_transactions(customer_id)
-    if result.status_code == 200:  # Check the status code of the response
-        return result
-    else:
-        return result  # Return the response with the appropriate status code
-
-def customer_feedback(request, customer_id):
-    result = get_customer_feedback(customer_id)
-    if result.status_code == 200:  # Check the status code of the response
-        return result
-    else:
-        return result  # Return the response with the appropriate status code
-
-def customer_interactions(request, customer_id):
-    result = get_customer_interactions(customer_id)
-    if result.status_code == 200:  # Check the status code of the response
-        return result
-    else:
-<<<<<<< Updated upstream
-        return result 
-=======
-        return result 
->>>>>>> 9ce3f1a363b305adc23081d84078667725e70fc2
->>>>>>> Stashed changes
