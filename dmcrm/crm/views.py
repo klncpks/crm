@@ -200,6 +200,36 @@ def add_interaction(request):
             return JsonResponse({'status': 'error', 'message': str(e)}, status=500)
     else:
         return JsonResponse({'status': 'error', 'message': 'Invalid request method'}, status=400)
+<<<<<<< Updated upstream
+=======
+<<<<<<< HEAD
+def extract_branch_regions(request):
+    # Define the path to the purchase history CSV file
+    purchase_history_path = r'C:\Users\Akash Reddy\OneDrive\Documents\GitHub\crm\dmcrm\datasets\purchase_history.csv'
+
+    # Dictionary to store unique regions and their branches
+    region_branches = {}
+
+    # Read the CSV file and collect region-branch information
+    with open(purchase_history_path, 'r', newline='', encoding='utf-8') as file:
+        reader = csv.DictReader(file)
+        for row in reader:
+            region = row['Region']
+            branch = row['Branch']
+            if region not in region_branches:
+                region_branches[region] = set()  # Create a new set for branches under the region
+            region_branches[region].add(branch)  # Add the branch to the set of branches under the region
+
+    # Print unique region values and their respective branches
+    for region, branches in region_branches.items():
+        print(f"Region: {region}")
+        print("Branches:")
+        for branch in branches:
+            print(f"  - {branch}")
+        print()
+    return JsonResponse({'status':'success'})
+=======
+>>>>>>> Stashed changes
     
 def customer_details(request, customer_id):
     result = customerDetails(customer_id)
@@ -227,4 +257,9 @@ def customer_interactions(request, customer_id):
     if result.status_code == 200:  # Check the status code of the response
         return result
     else:
+<<<<<<< Updated upstream
         return result 
+=======
+        return result 
+>>>>>>> 9ce3f1a363b305adc23081d84078667725e70fc2
+>>>>>>> Stashed changes

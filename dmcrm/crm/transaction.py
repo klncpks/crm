@@ -12,11 +12,14 @@ def generate_transaction_id():
         with open(purchase_history_path, 'r', newline='', encoding='utf-8') as file:
             reader = csv.DictReader(file)
             # Extract all existing transaction IDs
-            existing_ids = [int(row['TransactionID']) for row in reader]
-            # Find the maximum transaction ID
-            max_id = max(existing_ids)
-            # Generate the next transaction ID by incrementing the maximum ID
-            next_id = max_id + 1
+            existing_ids = [int(row['TransactionID']) for row in reader if row['TransactionID'].strip()]
+            if existing_ids:
+                # Find the maximum transaction ID
+                max_id = max(existing_ids)
+                # Generate the next transaction ID by incrementing the maximum ID
+                next_id = max_id + 1
+            else:
+                next_id = 1  # If no existing IDs, start from 1
             return str(next_id)  # Return the next transaction ID
     except FileNotFoundError:
         # Handle file not found error
@@ -24,6 +27,7 @@ def generate_transaction_id():
     except Exception as e:
         # Handle any other exceptions
         print("Error:", e)
+
 
 # Function to add a new transaction to the purchase history CSV file
 def add_new_transaction(data):
@@ -33,6 +37,7 @@ def add_new_transaction(data):
             writer = csv.DictWriter(file, fieldnames=["TransactionID", "EmployeeID", "CustomerID", "DateofPurchase", "ProductID", "Quantity", "Region", "Branch", "PaymentMode", "TotalAmount"])
             # Write the new transaction data to the CSV file
             transaction_id = generate_transaction_id()  # Generate the next transaction ID
+            print(transaction_id)
             writer.writerow({
                 "TransactionID": transaction_id, 
                 "EmployeeID": data.get("EmployeeID", ""), 
