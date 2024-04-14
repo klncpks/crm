@@ -29,5 +29,11 @@ urlpatterns = [
     path('customer/transactions/<str:customer_id>/',views.customer_transactions),
     path('customer/feedback/<str:customer_id>/',views.customer_feedback),
     path('customer/interactions/<str:customer_id>/',views.customer_interactions),
+    path('employees/',views.emp_details),
+    path('employees/<str:emp_id>/',views.emp_info),
+    path('employees/transactions/<str:emp_id>/', views.employee_transactions),
+    path('employees/interactions/<str:emp_id>/', views.employee_interactions),
+    path('employees/sales/count/', views.emp_sales),
+    path('employees/sales/<str:emp_id>/', views.employee_sales),
 ]
 

@@ -7,6 +7,8 @@ from .customer import customerDetails, get_customer_interactions, get_customer_t
 from .product import productDetails, allPurchases, feedback
 from .transaction import add_new_transaction
 from .interactions import add_new_interaction
+from .homepage import employee_information, get_employee_data, get_employee_transactions, get_employee_interactions
+from .homepage import sales_count_yearly, sales_count_yearly_by_employee
 import os
 
 # Define file paths
@@ -245,3 +247,37 @@ def customer_interactions(request, customer_id):
         return result
     else:
         return result 
+
+def emp_details(request):
+    return handle_request(request, employee_information)
+
+def emp_info(request, emp_id):
+    result = get_employee_data(emp_id)
+    if result.status_code == 200:
+        return result
+    else:
+        return result
+
+def employee_transactions(request, emp_id):
+    result = get_employee_transactions(emp_id)
+    if result.status_code == 200:  # Check the status code of the response
+        return result
+    else:
+        return result
+    
+def employee_interactions(request, emp_id):
+    result = get_employee_interactions(emp_id)
+    if result.status_code == 200:  # Check the status code of the response
+        return result
+    else:
+        return result 
+    
+def emp_sales(request):
+    return handle_request(request, sales_count_yearly)
+
+def employee_sales(request, emp_id):
+    result = sales_count_yearly_by_employee(emp_id)
+    if result.status_code == 200:
+        return result
+    else:
+        return result
