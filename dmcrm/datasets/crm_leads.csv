@@ -1,0 +1,101 @@
+LeadID,CustomerName,PhoneNumber,Email,LeadSource,Status,Outcome
+1,Joanna Baker,8867328820,melvinhale@example.com,Social Media,Interested,The customer is interested in becoming one.
+2,Logan Wells,7799701166,walshnancy@example.net,Social Media,Follow-up,The customer is not in need of the product at the moment.
+3,Mark Morgan,8935438776,webbshelly@example.org,Cold Call,New Lead,The customer is not in need of the product at the moment.
+4,Patricia Robinson,9182612679,iarcher@example.com,Referral,Contacted,The customer is already using a competitor's product.
+5,Diane Brandt,973.379.42,asilva@example.com,Referral,New Lead,The customer found the product too expensive.
+6,Gregory Williams,9843355135,adamsjoseph@example.org,Referral,New Lead,The customer is not in need of the product at the moment.
+7,Shirley Herrera,8185965875,ejames@example.net,Advertisement,Follow-up,The customer is already using a competitor's product.
+8,Travis Brewer,911.531.07,ocortez@example.com,Advertisement,Interested,The customer is interested in becoming one.
+9,Michael Johnson,9709079514,jamesreilly@example.com,Cold Call,Contacted,The customer is not interested.
+10,Jessica Wells,7635338093,kmcguire@example.org,Website,Interested,The customer is interested in becoming one.
+11,Sharon Edwards,7338750669,john31@example.org,Social Media,Contacted,The customer is not interested.
+12,Christopher Munoz,8709493834,davidstone@example.net,Website,Contacted,The customer is not interested.
+13,Travis Hale,7868563283,nmcgrath@example.net,Website,New Lead,The customer had a bad experience with a similar product in the past.
+14,Daniel Richardson,804.956.76,hallmatthew@example.com,Social Media,Interested,The customer is interested in becoming one.
+15,Ian Clements,9783188918,jduran@example.org,Referral,Follow-up,The customer is already using a competitor's product.
+16,Holly Chavez,8127438379,hfox@example.com,Cold Call,Interested,The customer is interested in becoming one.
+17,Jeffrey Pena,7406074624,mackenzie67@example.net,Advertisement,Interested,The customer is interested in becoming one.
+18,Maria Wilcox,7647340307,fharmon@example.org,Social Media,Follow-up,The customer found the product too expensive.
+19,Alexis Dodson,8552543555,ujenkins@example.com,Website,Follow-up,The customer is not in need of the product at the moment.
+20,Brent Carey,7078748957,uchandler@example.org,Cold Call,New Lead,The customer is not interested.
+21,Mary Williams,7134214692,jayroy@example.com,Social Media,Interested,The customer is interested in becoming one.
+22,Joseph Obrien,8702807867,hcortez@example.net,Advertisement,New Lead,The customer found the product too expensive.
+23,Stephen Shelton,9812459421,edoyle@example.net,Website,Interested,The customer is interested in becoming one.
+24,Kristina Alvarado,7618145554,keithpena@example.org,Social Media,Contacted,The customer is not interested.
+25,Bruce Wilkerson,9448164217,khurley@example.org,Advertisement,Contacted,The customer is already using a competitor's product.
+26,Karen Myers,8639985996,petersrobert@example.org,Social Media,Follow-up,The customer is not interested.
+27,Gregory Stevens,8193147106,vodonnell@example.org,Website,Follow-up,The customer is not interested.
+28,Nichole Espinoza,9558469540,christine33@example.com,Referral,New Lead,The customer is not interested.
+29,Jeremy Fletcher,7106217676,rcannon@example.net,Advertisement,Follow-up,The customer is not interested.
+30,Jacob Smith,8346925912,cynthia02@example.com,Social Media,Contacted,The customer is already using a competitor's product.
+31,Stephanie Stanley,9483663514,jenniferholt@example.org,Website,Contacted,The customer had a bad experience with a similar product in the past.
+32,Rebekah Smith,8906181757,swhitney@example.net,Advertisement,Contacted,The customer found the product too expensive.
+33,Joshua Gross,9138168145,nsanders@example.com,Social Media,Interested,The customer is interested in becoming one.
+34,Ann Fowler,8895649887,megan01@example.com,Website,Contacted,The customer is already using a competitor's product.
+35,Bridget Baxter,9989079390,bbenson@example.net,Social Media,New Lead,The customer found the product too expensive.
+36,Steven Villegas,9458552197,brookesmith@example.org,Advertisement,Interested,The customer is interested in becoming one.
+37,Angel Patrick,7099780736,gomezeileen@example.net,Advertisement,Contacted,The customer is already using a competitor's product.
+38,Lisa Fisher,7795404698,fsilva@example.org,Website,Follow-up,The customer had a bad experience with a similar product in the past.
+39,Jason Berry,8606573632,jonathan70@example.com,Cold Call,Follow-up,The customer is not interested.
+40,Larry Wright,7935889813,alvaradojulie@example.org,Social Media,Follow-up,The customer had a bad experience with a similar product in the past.
+41,Rhonda Leach,9978656899,qhenderson@example.org,Advertisement,Follow-up,The customer is not in need of the product at the moment.
+42,Gregory Miller,8414824198,pwood@example.com,Referral,Contacted,The customer is not interested.
+43,William Garcia,8225886602,caldwellandrea@example.net,Social Media,New Lead,The customer is not in need of the product at the moment.
+44,Andrea Johnson,9105258330,iweaver@example.org,Referral,Interested,The customer is interested in becoming one.
+45,Robin Pierce,8795176763,mjames@example.com,Social Media,Follow-up,The customer found the product too expensive.
+46,Katie Watson,8462546316,clane@example.org,Social Media,New Lead,The customer is not in need of the product at the moment.
+47,Vernon Perkins,8279532223,qmontgomery@example.net,Referral,Follow-up,The customer had a bad experience with a similar product in the past.
+48,Sean Alexander,9913594735,steven99@example.com,Advertisement,New Lead,The customer is not interested.
+49,Kevin Lopez,9266942534,vwong@example.org,Referral,Interested,The customer is interested in becoming one.
+50,Kenneth Powell,8615525427,taylor22@example.com,Cold Call,Follow-up,The customer is not interested.
+51,Marcus Novak,7919025680,nibarra@example.org,Website,Contacted,The customer is not interested.
+52,Ashley Mathews,9222643307,lynn96@example.net,Advertisement,New Lead,The customer found the product too expensive.
+53,Robert Johnson,8082695430,erobinson@example.com,Referral,New Lead,The customer is not in need of the product at the moment.
+54,Rodney Rodriguez,9858219701,daviddavis@example.com,Cold Call,New Lead,The customer had a bad experience with a similar product in the past.
+55,Jacob Martin,9298385685,lauraanderson@example.com,Cold Call,Contacted,The customer is not interested.
+56,Connie Watts,8298029473,sanchezchristopher@example.net,Website,Contacted,The customer is already using a competitor's product.
+57,Brent Rice,9343875553,zrichards@example.com,Social Media,New Lead,The customer is already using a competitor's product.
+58,Bryan Smith,9898076023,jessicajones@example.org,Website,Interested,The customer is interested in becoming one.
+59,Ashley Escobar,8793497013,martinezsue@example.net,Cold Call,Contacted,The customer is already using a competitor's product.
+60,Paul Mcmillan,9928618013,thomasvictoria@example.org,Cold Call,Interested,The customer is interested in becoming one.
+61,Brittany Cortez,8485151767,johnsonjody@example.com,Referral,Interested,The customer is interested in becoming one.
+62,Paul Johnson,8064224086,christophergreene@example.org,Website,Interested,The customer is interested in becoming one.
+63,Angelica Gomez,7325759247,pjohnson@example.com,Referral,Interested,The customer is interested in becoming one.
+64,Sydney White,7103302432,felicia74@example.net,Cold Call,Follow-up,The customer had a bad experience with a similar product in the past.
+65,Monica Russell,9218157417,aaron30@example.org,Referral,Contacted,The customer had a bad experience with a similar product in the past.
+66,Amber Payne,7497835684,eugenebarajas@example.com,Referral,Interested,The customer is interested in becoming one.
+67,Jonathan Payne,8049937188,christine08@example.org,Referral,New Lead,The customer is already using a competitor's product.
+68,Jay Morgan,8947299469,mcfarlandsherri@example.org,Website,Follow-up,The customer found the product too expensive.
+69,William Moss,9086620541,everettalicia@example.net,Social Media,New Lead,The customer found the product too expensive.
+70,Michael Cherry,8268432037,lorihoward@example.org,Advertisement,Follow-up,The customer found the product too expensive.
+71,Ashley Christian,9972905478,ywarren@example.net,Website,New Lead,The customer is not in need of the product at the moment.
+72,Roy Lee,9108300113,julie88@example.net,Referral,Follow-up,The customer is not in need of the product at the moment.
+73,Glenn Miranda,9016612451,davisemily@example.org,Advertisement,Follow-up,The customer had a bad experience with a similar product in the past.
+74,Allison Williams,7499317152,elizabeth69@example.com,Website,Contacted,The customer is already using a competitor's product.
+75,Hunter Powell,7249912998,roachcynthia@example.net,Referral,Interested,The customer is interested in becoming one.
+76,Tyler Harris,7956615900,erikbennett@example.net,Advertisement,Follow-up,The customer had a bad experience with a similar product in the past.
+77,Chelsey Maldonado,7589945052,jacquelinejones@example.com,Social Media,New Lead,The customer had a bad experience with a similar product in the past.
+78,Lauren Brown,7007225227,juangibson@example.net,Website,New Lead,The customer is not interested.
+79,Gina Thompson,7624376383,stonekrista@example.com,Website,Interested,The customer is interested in becoming one.
+80,Russell Fisher,9962338815,amandagonzales@example.org,Website,Contacted,The customer found the product too expensive.
+81,Courtney Warner,7517350150,bennettbeth@example.net,Website,Follow-up,The customer is not interested.
+82,Jessica Harris,8377459035,elizabeth49@example.net,Referral,Interested,The customer is interested in becoming one.
+83,Ashley Nichols,9677187473,chenchristopher@example.net,Social Media,Follow-up,The customer is not in need of the product at the moment.
+84,Christine Hall,9417812954,robertslisa@example.org,Referral,Interested,The customer is interested in becoming one.
+85,Matthew Doyle,7789197815,nicholas62@example.org,Referral,Interested,The customer is interested in becoming one.
+86,Jenny Paul,8768246579,alisonwang@example.com,Website,Interested,The customer is interested in becoming one.
+87,Kelli Owens,9889619427,jorgesullivan@example.net,Social Media,Contacted,The customer is not interested.
+88,Donald Jacobs,850.741.82,patrick79@example.net,Cold Call,Follow-up,The customer had a bad experience with a similar product in the past.
+89,Kathryn Lynn,746.800.57,pjohnson@example.com,Cold Call,Contacted,The customer had a bad experience with a similar product in the past.
+90,James Hoffman,9877330802,nataliebradley@example.net,Referral,New Lead,The customer found the product too expensive.
+91,Colleen Lewis,8789961704,jwood@example.com,Website,Interested,The customer is interested in becoming one.
+92,Patrick Nelson,9526916490,elee@example.net,Advertisement,Interested,The customer is interested in becoming one.
+93,Victoria Barnes,7464922517,soniawells@example.com,Cold Call,Interested,The customer is interested in becoming one.
+94,Rebecca Copeland,7995116913,kevinramos@example.org,Referral,Interested,The customer is interested in becoming one.
+95,Seth Miller,7965572518,cameron70@example.com,Referral,Interested,The customer is interested in becoming one.
+96,Melissa Scott,7715785789,sethallen@example.org,Cold Call,New Lead,The customer had a bad experience with a similar product in the past.
+97,Kendra Richards,9968990271,robertlopez@example.net,Advertisement,New Lead,The customer found the product too expensive.
+98,Elizabeth Moreno,7428318339,johnjones@example.com,Website,Interested,The customer is interested in becoming one.
+99,Kenneth Johnson,9486365011,erin50@example.net,Cold Call,Contacted,The customer is not in need of the product at the moment.
+100,Dale Sanchez,8292328010,sydney33@example.org,Website,Contacted,The customer found the product too expensive.

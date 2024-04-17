@@ -9,6 +9,7 @@ from .transaction import add_new_transaction
 from .interactions import add_new_interaction
 from .homepage import employee_information, get_employee_data, get_employee_transactions, get_employee_interactions
 from .homepage import sales_count_yearly, sales_count_yearly_by_employee
+from .crm import get_leads_count, get_interest_data, get_leads_data, get_leads_source_data
 import os
 
 # Define file paths
@@ -281,3 +282,15 @@ def employee_sales(request, emp_id):
         return result
     else:
         return result
+    
+def leads_count(request):
+    return handle_request(request, get_leads_count)
+
+def leads_interest(request):
+    return handle_request(request, get_interest_data)
+
+def leads_data(request):
+    return handle_request(request, get_leads_data)
+
+def leads_source(request):
+    return handle_request(request, get_leads_source_data)

@@ -35,5 +35,9 @@ urlpatterns = [
     path('employees/interactions/<str:emp_id>/', views.employee_interactions),
     path('employees/sales/count/', views.emp_sales),
     path('employees/sales/<str:emp_id>/', views.employee_sales),
+    path('leads/', views.leads_data),
+    path('leads/count/',views.leads_count),
+    path('leads/interest/',views.leads_interest),
+    path('leads/source/',views.leads_source),
 ]
 
