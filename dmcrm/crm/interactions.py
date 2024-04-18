@@ -7,11 +7,15 @@ interactions_path = r'C:\Users\Akash Reddy\OneDrive\Documents\GitHub\crm\dmcrm\d
 
 def generate_interaction_id():
     try:
+        if not os.path.exists(interactions_path):
+            # If the file doesn't exist, return the initial ID
+            return "000001"
+
         # Open the CSV file in read mode to find the maximum interaction ID
         with open(interactions_path, 'r', newline='', encoding='utf-8') as file:
             reader = csv.DictReader(file)
             # Extract all existing interaction IDs
-            existing_ids = [int(row['InteractionID']) for row in reader if row['InteractionID'].isdigit()]
+            existing_ids = [int(row['InteractionID']) for row in reader if row.get('InteractionID') and row['InteractionID'].isdigit()]
             if existing_ids:
                 # Find the maximum interaction ID
                 max_id = max(existing_ids)
@@ -28,18 +32,21 @@ def generate_interaction_id():
         # Handle any other exceptions
         print("Error:", e)
 
+
 def add_new_interaction(data):
     try:
         with open(interactions_path, 'a', newline='', encoding='utf-8') as file:
-            writer = csv.DictWriter(file, fieldnames=["InteractionID", "CustomerID", "DateofInteraction", "InteractionType", "PurposeofInteraction", "OutcomeofInteraction"])
+            writer = csv.DictWriter(file, fieldnames=["InteractionID", "CustomerID", "DateofInteraction", "InteractionType", "PurposeofInteraction", "OutcomeofInteraction", "EmployeeID"])
             interaction_id = generate_interaction_id()  # This function generates or retrieves the InteractionID
+            print(interaction_id)
             writer.writerow({
                 "InteractionID": interaction_id, 
                 "CustomerID": data.get("CustomerID", ""), 
                 "DateofInteraction": data.get("DateofInteraction", ""),
                 "InteractionType": data.get("InteractionType", ""),
                 "PurposeofInteraction": data.get("PurposeofInteraction", ""),
-                "OutcomeofInteraction": data.get("OutcomeofInteraction", "")
+                "OutcomeofInteraction": data.get("OutcomeofInteraction", ""),
+                "EmployeeID": data.get("EmployeeID", ""),
             })
             return interaction_id
     except Exception as e:
