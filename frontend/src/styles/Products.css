@@ -1,0 +1,195 @@
+.least5,
+.top5 {
+    background-color: rgb(233, 233, 234);
+    color: #5a585b;
+    padding: 2px;
+    font-family: Forum;
+}
+.least5-table th,
+.top5-table th {
+    font-family: Abolition;
+}
+.top5-table tr,
+.least5-table tr {
+    height: 50px;
+}
+.least5-table th,
+.least5-table td,
+.top5-table th,
+.top5-table td {
+
+    border-top: 1px solid rgb(135, 133, 130) ;
+    font-family: CoFo Sans;
+    min-width: 10px;
+    max-width: 50px;
+    background-color: transparent;
+    padding: 0px; /* Adjust cell padding */
+    font-size: 14px; /* Decrease font size */
+    text-align: center; /* Align text to the left */
+    border-radius: 10px;
+    box-shadow: none; 
+    
+}
+.least5-title,
+.top5-title {
+    text-align: left;
+    margin-left: 20px;
+    padding: 0;
+    margin-top: 5px; /* Adjust title margin */
+    margin-bottom: 15px; /* Adjust title margin */
+    font-size: 20px; /* Decrease title font size */
+}
+.least5-table,
+.top5-table {
+    margin-top: 10px;
+    width: 100%; /* Adjust table width */
+    background-color: transparent;
+    border-collapse: collapse; 
+}
+/* Gold */
+.top1 {
+    padding: 0;
+    max-width: 40px;
+    background: linear-gradient(to right, #ae8625, #e6b800); /* Gold gradient */
+    box-shadow: 0px 0px 10px #e7a82b inset; /* Gold inner shadow */
+}
+
+/* Silver */
+.least1 {
+    padding: 0;
+    max-width: 40px;
+    background: linear-gradient(to right, #c0c0c0, #a6a6a6); /* Silver gradient */
+    box-shadow: 0px 0px 10px #c0c0c0 inset; /* Silver shadow */
+}
+.top1-title,
+.least1-title
+{
+    color: aliceblue;
+    margin-top: -20px;
+    margin-bottom: 10px;
+    padding: 0;
+    text-align: center;
+    font-family: Abolition;
+}
+.least1 .product-name,
+.top1 .product-name {
+    color: rgb(219, 215, 215);
+    font-family: CoFo Sans;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+.top1 .revenue-generated {
+    font-size: 20px;
+    font-family: serif;
+    margin-bottom: -30px;
+    color: #e0cc79;
+}
+.least1 .revenue-generated {
+    font-size: 20px;
+    font-family:serif;
+    margin-bottom: -30px;
+    color: #d7d5d5;
+}
+.numbers {
+    color: rgb(173, 173, 173);
+}
+/* Style for select container */
+.filter .title{
+    font-family: Abolition;
+    text-align: left;
+    margin-left: 10px;
+    font-size: 28px;
+    display: flex;
+}  
+.filter .title .refresh-icon{
+    margin-left: 750px;
+}
+.refresh-icon :hover {
+    box-shadow: 0px 0px 10px 4px rgba(89, 172, 231, 0.5);
+    border-radius: 20px;
+    background-color: rgba(89, 172, 231, 0.5);
+}
+.filter table
+{
+    border-spacing: 10px;
+    width: 100%;
+}
+.filter tr {
+    padding: 0;
+    height: 70px;
+}
+
+.filter td {
+    padding: 5px;
+    background-color: white;
+}
+.select Select{
+    max-height: 10px;
+}
+.label
+{
+    text-align: left !important;
+}
+.listofproducts
+{
+       padding: 20px;
+}
+.listofproducts .title{
+    font-family: Abolition;
+    text-align: left;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    font-size: 25px;
+}
+.list-table {
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    border-collapse: collapse;
+    padding:0;
+    max-height: 100px;
+}
+.list-table td 
+{
+    background-color: transparent;
+    padding: 0;
+    border-top: 1px solid rgb(135, 133, 130) ;
+    font-family: CoFo Sans;
+    min-width: 10px;
+    max-width: 50px;
+    font-size: 14px; /* Decrease font size */
+    text-align: center; /* Align text to the left */
+    border-radius: 30px;
+    box-shadow: none;
+}
+.list-table tr {
+    height: 50px;
+}
+.list-table th{
+    background-color: rgb(131, 83, 67);
+    padding: 0;
+    box-shadow: none;
+    font-family: Abolition;
+    border-radius: 0;
+    color: aliceblue;
+}
+
+.products .pagination {
+    margin-top: 10px;
+}
+.products .pagination .previous {
+    width: 80px;
+    background-color: rgb(135, 123, 168);
+    color: white;
+    border-radius: 5px;
+    border-color: transparent;
+    padding: 5px;
+}
+.products .pagination .next {
+    width: 80px;
+    margin-left: 730px;
+    background-color: rgb(135, 123, 168);
+    color: white;
+    border-radius: 5px;
+    border-color: transparent;
+    padding: 5px;
+}

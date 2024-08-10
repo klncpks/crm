@@ -1,0 +1,221 @@
+.product table tr 
+{
+    height: 60px;
+}
+.product .search-bar-title {
+    font-size: 22px;
+    font-family: Forum;
+}
+
+.product .search-bar {
+    background-color: transparent;
+    padding: 0px;
+}
+.product-image-container {
+    padding: 0%;
+    height: 300px;
+    width: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+}
+
+.product-image-container img {
+    height: 100%;
+    width: 100%;
+    object-fit: fill;
+}
+
+.product .search-bar-title-container {
+    margin-bottom: 20px; /* Adjust margin */
+    text-align: left;
+}
+.product .about {
+    font-size: 22px;
+    font-family: Forum;
+    text-align: left;
+}
+.product .filter-button {
+    border: 1px solid #000;
+    background: transparent;
+    margin: 5px 5px;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    width : 120px;
+    height : 40px;
+  }
+  
+.product .filter-button:hover {
+    box-shadow: 3px 3px 0px 0px rgba(0, 0, 0);
+  }
+.product .filter-button.active {
+    background-color: black;
+    color : white
+  }
+.product .image {
+    width: 15%;
+}
+.product .product-details {
+    width: 30%;
+}
+.product .sales-graph {
+    width: 45%;
+}
+.product .first-row {
+    height: 100px;
+    
+}
+.product .product-details .table {
+    padding: 0%;
+    border-collapse: collapse;
+}
+.product .product-details .table th{
+    font-family: Abolition;
+    font-size: 25px;
+    box-shadow: none;
+    padding: 0%;
+    text-align: left;
+    padding-left: 10px;
+}
+.product .product-details .table td {
+    font-family: CoFo Sans;
+    background-color: transparent;
+    padding: 0%; /* Adjust cell padding */
+    font-size: 20px; /* Decrease font size */
+    text-align: left; /* Align text to the left */
+    box-shadow: none; 
+    padding-left: 10px;
+}
+.product .product-details .table .cost {
+    text-align: center;
+    background-color: #f5f5f5;
+}
+.product .luxury {
+    background: linear-gradient(to right, #ae8625, #e6b800); /* Gold gradient */
+    box-shadow: 0px 0px 10px #e7a82b inset; /* Gold inner shadow */
+}
+.product .premium {
+    background: linear-gradient(to right, #c0c0c0, #a6a6a6); /* Silver gradient */
+    box-shadow: 0px 0px 10px #c0c0c0 inset; /* Silver shadow */
+}
+.product .budget {
+    background: linear-gradient(to right, #3e2626, #765c5c); /* Silver gradient */
+    box-shadow: 0px 0px 10px #886d6d inset; /* Silver shadow */
+}
+.product .segment {
+    margin-top: -50px;
+    font-family: 'Abolition';
+    font-size: 25px;
+}
+.product .segment-text {
+    color: whitesmoke;
+    margin-top: 15px;
+    font-family: 'CoFo Sans';
+    font-size: 30px;
+}
+.product .frequent-customers .title{
+    font-family: Abolition;
+    font-size: 22px;
+    margin-bottom: 10px;
+    text-align: left;
+    padding-left: 5px;
+}
+.product .feedback .table,
+.product .frequent-customers .table {
+    border-spacing: 1;
+    background: #fff;
+    overflow: hidden;
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+    border-radius: 10px;
+    border-collapse: collapse;
+  }
+.product .feedback .table *,
+.product .frequent-customers .table * {
+    position: relative;
+    margin-top: 10px;
+    width: 100%; /* Adjust table width */
+    background-color: transparent;
+  }
+.product .feedback .table .head,
+.product .frequent-customers .table .head{
+    height: 60px;
+    background: #36304a;
+    font-family: OpenSans-Regular;
+    font-size: 18px;
+    color: #fff;
+    line-height: 1.2;
+    font-weight: unset;
+    box-shadow: none;
+    text-align: center;
+}
+.product .feedback .table .body,
+.product .frequent-customers .table .body{
+    font-family: OpenSans-Regular;
+    font-size: 15px;
+    color: gray;
+    line-height: 1.2;
+    font-weight: unset;
+}
+.product .feedback .table .bodytr:hover,
+.product .frequent-customers .table .bodytr:hover {
+    color: #555;
+    background-color: #f5f5f5;
+    cursor: pointer;
+}
+.product .feedback .table .body tr:nth-child(even),
+.product .frequent-customers .table .body tr:nth-child(even) {
+    background-color: #f5f5f5;
+}
+.product .feedback .table thead th {
+    padding-left: 10px;
+}
+.product .feedback .table th,
+.product .feedback .table td,
+.product .frequent-customers .table th,
+.product .frequent-customers .table td {
+    box-shadow: none;
+    border-radius: 0;
+    table-layout: fixed; /* Reset border-radius for all cells */
+    padding: 0%;
+    font-size: 15px;
+}
+
+.product .feedback .table .body tr:first-child td:first-child,
+.product .feedback .table .body tr:first-child td:last-child,
+.product .feedback .table .body tr:last-child td:first-child,
+.product .feedback .table .body tr:last-child td:last-child,
+.product .frequent-customers .table .body tr:first-child td:first-child,
+.product .frequent-customers .table .body tr:first-child td:last-child,
+.product .frequent-customers .table .body tr:last-child td:first-child,
+.product .frequent-customers .table .body tr:last-child td:last-child {
+    border-radius: 10px; /* Adjust border-radius as needed */
+}
+
+.filters-Table{
+    max-width: 100%;
+    padding: 0%;
+}
+
+.product .feedback .table th:first-child,
+.product .feedback .table td:first-child,
+.product .frequent-customers .table th:first-child,
+.product .frequent-customers .table td:first-child {
+    width: 20%; /* Set a fixed width for the first column */
+}
+.product .feedback .table th:not(:first-child),
+.product .feedback .table td:not(:first-child),
+.product .frequent-customers .table th:not(:first-child),
+.product .frequent-customers .table td:not(:first-child) {
+    width: auto; /* Let remaining columns adjust proportionally */
+}
+.product .feedback .rating {
+    background-color: rgb(255, 251, 251);
+    padding: 5px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+}

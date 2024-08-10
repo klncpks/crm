@@ -1,0 +1,374 @@
+table {
+  border-collapse: separate;
+  border-spacing: 20px 20px;
+  width: 100%;
+  height: 80%;
+}
+ tr {
+  height: 150px;
+}
+th, td {
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  font-size: large;
+  background-color: rgb(233, 233, 234);;
+  box-shadow: 3px 3px 5px rgb(213, 213, 216);
+}
+.home .cell1 {
+  padding: 0px 0px 0px 0px;
+  max-width: 180px;
+}
+.home .cell2 {
+  max-width: 150px;
+}
+.emp-label-heading {
+  font-family: Absolute;
+}
+.emp-label {
+  font-family: CoFo Sans;
+}
+.emp-sales-heading ,
+.emp-total-revenue-heading{
+  margin-top: 5px;
+  margin-bottom:5px;
+  font-size: 25px;
+  font-family: Absolute;
+}
+.emp-total-sales-container,
+.emp-total-revenue-container {
+  margin-top: 10px;
+  margin-bottom:5px;
+  font-family: 25px;
+  font-family: CoFo Sans;
+}
+.emp-interactions_details .heading {
+  font-family: Absolute;
+  font-size: 26px;
+  align-items: center;
+  margin-bottom: 0.3em;
+  margin-top: 0.3em;
+}
+.emp-transaction_details-container .heading {
+  font-family: Absolute;
+  font-size: 26px;
+  margin-top: 5px;
+  margin-bottom:8px;
+}
+.home .emp-total-revenue-details{
+background: linear-gradient(to right, #FFD700, #FFD700); /* Gold gradient */
+box-shadow: 0px 0px 10px #FFD700 inset;
+}
+
+.home .emp-total-sales-details {
+  background-color: #74EBD5;
+  background-image: linear-gradient(90deg, #74EBD5 0%, #9FACE6 100%);
+}
+
+.home .emp-detailstd {
+border-radius: 10px;
+filter: drop-shadow(0 5px 10px 0 #ffffff);
+width: 1.5em;
+height: 1.1em;
+background-color: #ffffff;
+padding: 0.2em;
+position: relative;
+z-index: 0;
+overflow: hidden;
+}
+
+.home .emp-detailstd::before {
+content: "";
+position: absolute;
+z-index: -1;
+top: -15px;
+left: -15px; /* Change right to left */
+background: #655977;
+height: 110%; /* Change height to 100% */
+width: 5%; /* Initial width to 5% */
+border-radius: 32px;
+transform-origin: right center; /* Change transform origin */
+transition: width 0.6s ease-out; /* Transition width property */
+}
+
+.home .emp-detailstd:hover::before {
+width: 110%; /* Adjust width to cover up to 90% of the width */
+}
+
+.home .emp-detailstd:hover {
+color: #fafafa; /* Change text color to silk white */
+}
+
+.home .employee-details-container {
+text-align: left; 
+}
+
+.home .emp-label-heading,
+.emp-label {
+margin-bottom: 5px; /* Add some margin between labels */
+}
+
+.home .emp-chart-container {
+width: 45%;
+}
+
+.home .emp-chart-buttons {
+border: 1px solid #000;
+background: transparent;
+margin: 5px 5px;
+border-radius: 5px;
+padding: 5px 10px;
+cursor: pointer;
+transition: all 0.2s ease-in-out;
+width : 120px;
+height : 40px;
+}
+
+.home .emp-chart-buttons:hover {
+box-shadow: 3px 3px 0px 0px rgba(0, 0, 0);
+}
+
+.home .emp-chart-buttons.active {
+background-color: black;
+color : white
+}
+
+.home .emp-interactions-table-container {
+max-height: 18em;
+overflow-y: auto;
+}
+
+.home .emp-interactions-table {
+border-spacing: 1;
+background: #fff;
+overflow: hidden;
+width: 100%;
+margin: 0 auto;
+position: relative;
+border-radius: 10px;
+border-collapse: collapse;
+text-align: center;
+}
+.home .emp-interactions-table * {
+position: relative;
+margin-top: 10px;
+width: 100%; /* Adjust table width */
+background-color: transparent;
+}
+.home .emp-interactions-table-head{
+height: 60px;
+background: #36304a;
+font-family: OpenSans-Regular;
+font-size: 18px;
+color: #fff;
+line-height: 1.2;
+font-weight: unset;
+box-shadow: none;
+}
+.home .emp-interactions-table-body{
+font-family: OpenSans-Regular;
+font-size: 15px;
+color: gray;
+line-height: 1.2;
+font-weight: unset;
+}
+.home .emp-interactions-table-bodytr:hover {
+color: #555;
+background-color: #f5f5f5;
+cursor: pointer;
+}
+.home .emp-interactions-table-body tr:nth-child(even) {
+background-color: #f5f5f5;
+}
+.emp-interactions-table tr
+{
+  height: 50px;
+}
+.emp-interactions-table th,
+.emp-interactions-table td {
+  font-size: 15px;
+box-shadow: none;
+border-radius: 0;
+table-layout: fixed; 
+padding-left: 0.75em;
+padding-right: 0%;
+padding-bottom: 0%;
+text-align: center;
+}
+
+/* Apply rounded corners only to specific cells */
+.emp-interactions-table-body tr:first-child td:first-child,
+.emp-interactions-table-body tr:first-child td:last-child,
+.emp-interactions-table-body tr:last-child td:first-child,
+.emp-interactions-table-body tr:last-child td:last-child {
+border-radius: 10px; /* Adjust border-radius as needed */
+}
+
+.home .emp-interactions-tables-Table{
+max-width: 100%;
+}
+
+.emp-interactions-table th:first-child,
+.emp-interactions-table td:first-child {
+width: 20%; /* Set a fixed width for the first column */
+}
+
+.emp-interactions-table th:not(:first-child),
+.emp-interactions-table td:not(:first-child) {
+width: auto; /* Let remaining columns adjust proportionally */
+}
+
+.home .emp-transactions-table {
+border-spacing: 1;
+background: #fff;
+overflow: hidden;
+width: 100%;
+margin: 0 auto;
+position: relative;
+border-radius: 10px;
+border-collapse: collapse;
+}
+.home .emp-transactions-table * {
+position: relative;
+margin-top: 0px;
+width: 100%; /* Adjust table width */
+background-color: transparent;
+}
+.home .emp-transactions-table-head{
+height: 60px;
+background: #36304a;
+font-family: OpenSans-Regular;
+font-size: 18px;
+color: #fff;
+line-height: 1.2;
+font-weight: unset;
+box-shadow: none;
+}
+.home .emp-transactions-table-body{
+font-family: OpenSans-Regular;
+font-size: 15px;
+color: gray;
+line-height: 1.2;
+font-weight: unset;
+}
+.home .emp-transactions-table-bodytr:hover {
+color: #555;
+background-color: #f5f5f5;
+cursor: pointer;
+}
+.home .emp-transactions-table-body tr:nth-child(even) {
+background-color: #f5f5f5;
+}
+
+.emp-transactions-table th,
+.emp-transactions-table td {
+box-shadow: none;
+border-radius: 0;
+table-layout: fixed; 
+padding:0%;
+}
+
+/* Apply rounded corners only to specific cells */
+.emp-transactions-table-body tr:first-child td:first-child,
+.emp-transactions-table-body tr:first-child td:last-child,
+.emp-transactions-table-body tr:last-child td:first-child,
+.emp-transactions-table-body tr:last-child td:last-child {
+border-radius: 10px; /* Adjust border-radius as needed */
+}
+
+.home .emp-transactions-tables-Table{
+max-width: 100%;
+}
+
+.emp-transactions-table th:first-child,
+.emp-transactions-table td:first-child {
+width: 20%; /* Set a fixed width for the first column */
+}
+
+.emp-transactions-table th:not(:first-child),
+.emp-transactions-table td:not(:first-child) {
+width: auto; /* Let remaining columns adjust proportionally */
+}
+
+.home .emp-transaction_details-container {
+margin-top: 20px;
+max-height: 10px;
+overflow-y: auto;
+}
+
+.home .emp-interactions_details{
+background-color: #FFDEE9;  
+background-image: linear-gradient(0deg, #FFDEE9 0%, #B5FFFC 100%);
+}
+
+.home .emp-transaction_details-container {
+background-color: #FFDEE9;  
+background-image: linear-gradient(0deg, #FFDEE9 0%, #B5FFFC 100%);
+}
+.navi-buttons-left,
+.navi-buttons-right {
+    background-color: #111827;
+    border: 1px solid transparent;
+    border-radius: .75rem;
+    box-sizing: border-box;
+    color: #FFFFFF;
+    cursor: pointer;
+    flex: 0 0 auto;
+    font-family: "Inter var",ui-sans-serif,system-ui,-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    font-size: 1.125rem;
+    font-weight: 600;
+    line-height: 1.5rem;
+    padding: .75rem 1.2rem;
+    text-align: center;
+    text-decoration: none #6B7280 solid;
+    text-decoration-thickness: auto;
+    transition-duration: .2s;
+    transition-property: background-color,border-color,color,fill,stroke;
+    transition-timing-function: cubic-bezier(.4, 0, 0.2, 1);
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    width: auto;
+  }
+  
+  .navi-buttons-left,
+  .navi-buttons-right:hover {
+    background-color: #374151;
+  }
+  
+  .navi-buttons-left,
+ .navi-buttons-right:focus {
+    box-shadow: none;
+    outline: 2px solid transparent;
+    outline-offset: 2px;
+  }
+  
+ .home .navi-buttons-left, 
+ .home .navi-buttons-right {
+  padding: .40rem 1.5rem;
+}
+
+.home .navi-buttons-left{
+    margin-top: 15px;
+    margin-right: 20px; /* Add some space between buttons */
+    float: left;
+}
+
+.home .navi-buttons-right{
+    margin-top: 15px;
+    margin-left: 20px; /* Add some space between buttons */
+    float: right;
+}
+
+.emp-transactions-table tr{
+  height: 4em;
+}
+
+.emp-transactions-table td{
+  height: 4em;
+}
+
+.emp-transactions-table th{
+  height: 4em;
+}
+

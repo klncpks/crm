@@ -1,0 +1,244 @@
+@font-face {
+    font-family: OpenSans-Regular;
+    src: url(./OpenSans-Regular.ttf);
+  }
+
+.customers tr, td {
+    max-width: 60px;
+    height: 60px;
+}
+.loyal {
+    background-color: rgb(233, 233, 234);
+    color: #5a585b;
+    padding: 4px;
+    font-family: Forum;
+    max-width: 4.5em;
+}
+.loyal-table th {
+    font-family: Abolition;
+}
+.loyal-table th,
+.loyal-table td {
+    border-top: 1px solid rgb(135, 133, 130) ;
+    font-family: CoFo Sans;
+    min-width: 10px;
+    max-width: 60px;
+    background-color: transparent;
+    padding: 0px; /* Adjust cell padding */
+    font-size: 14px; /* Decrease font size */
+    text-align: center; /* Align text to the left */
+    border-radius: 10px;
+    box-shadow: none; 
+    
+}
+.loyal-title {
+    text-align: middle;
+    margin-left: 20px;
+    padding: 0;
+    margin-top: 10px; /* Adjust title margin */
+    margin-bottom: 15px; /* Adjust title margin */
+    font-size: 20px; /* Decrease title font size */
+}
+.loyal-table {
+    margin-top: 10px;
+    width: 100%; /* Adjust table width */
+    background-color: transparent;
+    border-collapse: collapse; 
+}
+
+.gender-count{
+    max-width:35px;
+}
+
+.gender-box{
+    max-height: 100%;
+}
+
+.total-count {
+    padding: 0;
+    max-width: 100%;
+    background: linear-gradient(to right, #ae8625, #e6b800); /* Gold gradient */
+    box-shadow: 0px 0px 10px #e7a82b inset;
+    height : 10px;
+}
+
+.total-count-val{
+    color: aliceblue;
+    margin-bottom: 10px;
+    text-align: center;
+    font-family: Abolition;
+    font-size: 40px;
+}
+
+.totalCount-title
+{
+    color: aliceblue;
+    margin-top: 0px;
+    margin-bottom: 5px;
+    padding-top: 10px;
+    text-align: center;
+    font-family: Abolition;
+}
+
+.numbers {
+    color: rgb(173, 173, 173);
+}
+
+.customers_yearly_count{
+    max-width: 3.5em;
+    border-collapse: collapse;
+}
+
+.cust_yearly_count-chart{
+    max-width: 100%;
+    max-height: 100%;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.filter-button {
+    border: 1px solid #000;
+    background: transparent;
+    margin: 5px 5px;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    width : 120px;
+    height : 40px;
+  }
+  
+  .filter-button:hover {
+    box-shadow: 3px 3px 0px 0px rgba(0, 0, 0);
+  }
+  .filter-button.active {
+    background-color: black;
+    color : white
+  }
+
+.filterTable {
+    border-spacing: 1;
+    background: #fff;
+    overflow: hidden;
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+    border-radius: 10px;
+    border-collapse: collapse;
+  }
+.filterTable * {
+    position: relative;
+    margin-top: 10px;
+    width: 100%; /* Adjust table width */
+    background-color: transparent;
+  }
+.filter-head{
+    height: 60px;
+    background: #36304a;
+    font-family: OpenSans-Regular;
+    font-size: 18px;
+    color: #fff;
+    line-height: 1.2;
+    font-weight: unset;
+    box-shadow: none;
+}
+.filter-body{
+    font-family: OpenSans-Regular;
+    font-size: 15px;
+    color: gray;
+    line-height: 1.2;
+    font-weight: unset;
+}
+.filter-bodytr:hover {
+    color: #555;
+    background-color: #f5f5f5;
+    cursor: pointer;
+}
+.filter-body tr:nth-child(even) {
+    background-color: #f5f5f5;
+}
+
+.filterTable th,
+.filterTable td {
+    box-shadow: none;
+    border-radius: 0;
+    table-layout: fixed; 
+    padding: 0%;/* Reset border-radius for all cells */
+}
+
+/* Apply rounded corners only to specific cells */
+.filter-body tr:first-child td:first-child,
+.filter-body tr:first-child td:last-child,
+.filter-body tr:last-child td:first-child,
+.filter-body tr:last-child td:last-child {
+    border-radius: 10px; /* Adjust border-radius as needed */
+}
+
+.filters-Table{
+    max-width: 100%;
+}
+
+.filterTable th:first-child,
+.filterTable td:first-child {
+    width: 20%; /* Set a fixed width for the first column */
+}
+
+.filterTable th:not(:first-child),
+.filterTable td:not(:first-child) {
+    width: auto; /* Let remaining columns adjust proportionally */
+}
+
+.navi-buttons-left,
+.navi-buttons-right {
+    background-color: #111827;
+    border: 1px solid transparent;
+    border-radius: .75rem;
+    box-sizing: border-box;
+    color: #FFFFFF;
+    cursor: pointer;
+    flex: 0 0 auto;
+    font-family: "Inter var",ui-sans-serif,system-ui,-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    font-size: 1.125rem;
+    font-weight: 600;
+    line-height: 1.5rem;
+    padding: .75rem 1.2rem;
+    text-align: center;
+    text-decoration: none #6B7280 solid;
+    text-decoration-thickness: auto;
+    transition-duration: .2s;
+    transition-property: background-color,border-color,color,fill,stroke;
+    transition-timing-function: cubic-bezier(.4, 0, 0.2, 1);
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    width: auto;
+  }
+  
+  .navi-buttons-left,
+  .navi-buttons-right:hover {
+    background-color: #374151;
+  }
+  
+  .navi-buttons-left,
+ .navi-buttons-right:focus {
+    box-shadow: none;
+    outline: 2px solid transparent;
+    outline-offset: 2px;
+  }
+  
+ .navi-buttons-left, 
+ .navi-buttons-right {
+  padding: .40rem 1.5rem;
+}
+
+.navi-buttons-left{
+    margin-top: 15px;
+    margin-right: 20px; /* Add some space between buttons */
+    float: left;
+}
+
+.navi-buttons-right{
+    margin-top: 15px;
+    margin-left: 20px; /* Add some space between buttons */
+    float: right;
+}

@@ -1,0 +1,161 @@
+tr, td {
+  max-width: 60px;
+  height: 60px;
+}
+.leads-outcome-bars div {
+  display: flex;
+  align-items: center;
+}
+
+.leads-outcome-bars p {
+  margin-right: 10px; /* Adjust as needed */
+}
+
+.lead-progress {
+  width: 100%;
+  position: relative;
+}
+
+.lead-progress:hover::after {
+  content: attr(value);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+.lead-count-container .title {
+  font-family: Absolute;
+  font-size: 25px;
+  color: #605f65;
+  margin-bottom: 10px;
+}
+.lead-source-container .title {
+  font-family: Absolute;
+  font-size: 22px;
+  margin-bottom: 10px;
+  color: #605f65;
+
+}
+.crm-layout .leads-table {
+border-spacing: 1;
+background: #fff;
+overflow: hidden;
+width: 100%;
+margin: 0 auto;
+position: relative;
+border-radius: 10px;
+border-collapse: collapse;
+}
+.crm-layout .leads-table * {
+position: relative;
+margin-top: 10px;
+width: 100%; /* Adjust table width */
+background-color: transparent;
+}
+.crm-layout .leads-table-head{
+height: 60px;
+background: #36304a;
+font-family: OpenSans-Regular;
+font-size: 18px;
+color: #fff;
+line-height: 1.2;
+font-weight: unset;
+box-shadow: none;
+}
+.crm-layout .leads-table-body{
+font-family: OpenSans-Regular;
+font-size: 15px;
+color: gray;
+line-height: 1.2;
+font-weight: unset;
+}
+.crm-layout .leads-table-bodytr:hover {
+color: #555;
+background-color: #f5f5f5;
+cursor: pointer;
+}
+.crm-layout .leads-table-body tr:nth-child(even) {
+background-color: #f5f5f5;
+}
+
+.leads-table th,
+.leads-table td {
+box-shadow: none;
+border-radius: 0;
+table-layout: fixed; 
+padding:0em;
+}
+
+/* Apply rounded corners only to specific cells */
+.leads-table-body tr:first-child td:first-child,
+.leads-table-body tr:first-child td:last-child,
+.leads-table-body tr:last-child td:first-child,
+.leads-table-body tr:last-child td:last-child {
+border-radius: 10px; /* Adjust border-radius as needed */
+}
+
+.crm-layout .leads-tables-Table{
+max-width: 100%;
+}
+
+.leads-table th:first-child,
+.leads-table td:first-child {
+width: 20%; /* Set a fixed width for the first column */
+}
+
+.leads-table th:not(:first-child),
+.leads-table td:not(:first-child) {
+width: auto; /* Let remaining columns adjust proportionally */
+}
+
+.crm-layout .crm_leads-container {
+background-color: #FFDEE9;  
+background-image: linear-gradient(0deg, #FFDEE9 0%, #B5FFFC 100%);
+}
+
+.crm-layout .crm_leads-container {
+margin-top: 20px;
+width: 100%;
+overflow-y: auto;
+}
+
+
+
+.crm-leads-container{
+max-height: 31em;
+overflow-y: auto;
+}
+.crm-layout .leads-table th,
+.crm-layout .leads-table td {
+  height: 30px; /* Set the height of table cells */
+  padding: 5px; 
+}
+.crm-layout .leads-table th:nth-child(1), 
+.crm-layout .leads-table td:nth-child(1) {
+  width: 100px; /* Set a fixed width for the first column */
+}
+
+.crm-layout .leads-table th:nth-child(2), 
+.crm-layout .leads-table td:nth-child(2) {
+  width: 100px; /* Set a fixed width for the second column */
+}
+.crm-layout .leads-table th:nth-child(3), 
+.crm-layout .leads-table td:nth-child(3) {
+  width: 220px; /* Set a fixed width for the second column */
+}
+.crm-layout .leads-table th:nth-child(4), 
+.crm-layout .leads-table td:nth-child(4) {
+  width: 110px; /* Set a fixed width for the second column */
+}
+.crm-layout .leads-table th:nth-child(5), 
+.crm-layout .leads-table td:nth-child(5) {
+  width: 80px; /* Set a fixed width for the second column */
+}
+.crm-layout .leads-table th,
+.crm-layout .leads-table td {
+  width: auto; /* Let the width adjust to content */
+}

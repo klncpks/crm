@@ -1,0 +1,32 @@
+.sidebar {
+    width: 200px;
+    max-height: 100%;
+    background-color: #46474a;
+    margin-left:  -10px;
+    padding-top: 10px;
+    
+}
+.sidebar li {
+    padding: 10px;
+    display: block;
+    color: #d6d1d1;
+    text-decoration: none;
+    border-radius: 8px;
+}
+.logo{
+    margin-top: 5px;
+    margin-left: 33px;
+    font-size: 28px;
+    font-weight: 600;
+    font-family:  'Open Sans', sans-serif;
+    color: #d6d1d1;
+    
+}
+.sidebar li:hover {
+    color: #46474a;
+    background-color: #d6d1d1;
+}
+.sidebar li.active {
+    color: #46474a;
+    background-color: #d6d1d1;
+}
